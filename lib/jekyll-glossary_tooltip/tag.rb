@@ -8,7 +8,7 @@ require "jekyll"
 module Jekyll
   module GlossaryTooltip
     # Custom liquid tag definition.
-    class GlossaryTag < Liquid::Tag
+    class Tag < Liquid::Tag
       def initialize(tag_name, text, tokens)
         super
         @text = text.strip
@@ -64,4 +64,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('glossary', Jekyll::GlossaryTooltip::GlossaryTag)
+Liquid::Template.register_tag('glossary', Jekyll::GlossaryTooltip::Tag)

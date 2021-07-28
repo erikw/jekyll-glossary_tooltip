@@ -8,7 +8,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Erik Westrup"]
   spec.email         = ["erik.westrup@gmail.com"]
 
-  spec.summary       = "Generate a Google Search Console verification file from your _config.yml e.g. google47733b3288357e4.html to the root of your Jekyll site."
   spec.summary       = "Jekyll plugin providing a glossary liquid tag that will show a tooltip of a term definition in your site"
   spec.description   = "TODO"
   spec.homepage      = "https://github.com/erikw/jekyll-glossary_tooltip/"

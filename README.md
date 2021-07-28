@@ -6,28 +6,10 @@
 [![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/59050f3f66ed1f1ee32e/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
 
 
+TODO make all badges work
 
+TODO plugin description
 
-This is a very simple plugin that will generate a Google Search Console (GSC from here) [verification file](https://support.google.com/webmasters/answer/9008080?hl=en) to your `_site/` directory in a Jekyll project. This file is used by GSC to verify that you own the site and looks for example like my [googlef47733b3288357e4.html](https://erikw.me/google47733b3288357e4.html).
-
-## Why?
-Why use this plugin?
-
-### Tl;DR
-* Don't stuff bloating `<meta>` tag to all your HTML pages; use simple file in the site's root
-* Generate what can be generated; keep your source tree clean!
-
-
-### !TL;DidRead
-There are multiple ways to [verify](https://support.google.com/webmasters/answer/9008080?hl=en) the ownership of your site. The two simpler ways, both suitable for Github Pages owners, are to add an `<meta> tag to your pages` or upload a special unique file to the root of the site. For adding the meta tag, there are excellent plugins making this very easy for example [jekyll-seo-tag](http://jekyll.github.io/jekyll-seo-tag/usage/). If you want to the meta tag, I recommend this plugin.
-
-However if you feel that it's bloated to add this `<meta>` tag to the header all you pages, keeping file size and page load speed in mind, you may one to go for the file based verification method instead.
-
-So with the file based method, why not just add the file you downloaded from GSC to your source directory and let Jekyll put it in `_site/` on generation? As we're using a SSG (Static Site Generator), we should generate everything we can. It's verdantly nice to keep the source tree clean and make everything that can be a configuration that generates what is needed.
-
-Thus, this plugin exist to solve this problem. Give the plugin the unique code GSC provided you and it will generate the file for you in `_site/`!
-
-Note that if you do place a verification file in the root of the source tree, this will override the generation by this plugin.
 
 # Installation
 1. Add this gem to your Jekyll site's Gemfile
@@ -42,20 +24,10 @@ Note that if you do place a verification file in the root of the source tree, th
    plugins:
      - jekyll-glossary_tooltip
    ```
-1. Get the GSC unique code for you website.
-   1. Register your website at [Google Search Console](https://search.google.com/search-console?resource_id=https://erikw.me/)
-   1. From the main dashboard of your site at GSC: _Settings > Ownership Verification > HTML File_ and download the unique file
-   1. Instead of putting this file in our jekyll site, just copy the unique code from the HTML file name e.g. from `googlef47733b3288357e4.html` copy `f47733b3288357e4`.
-1. In your site's `_config.yml`, configure this plugin with the code from the previous step:
-   ```yml
-   google_search_console:
-     verification_file_code: 47733b3288357e4
-   ```
+1. TODO explain data/glossary.yml
 1. Now just build your site and verify that the verification file now exist!
    ```console
    $ bundle exec jekyll build
-   $ ls _site/ | grep "google.*\.html"
-   google47733b3288357e4.html
    ```
 
 # Development

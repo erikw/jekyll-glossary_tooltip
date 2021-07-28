@@ -5,6 +5,6 @@ require_relative "jekyll-glossary_tooltip/generator"
 
 module Jekyll
   # Module for the plugin.
-  module GoogleSearchConsoleVerificationFile
+  module GlossaryTooltip
   end
 end

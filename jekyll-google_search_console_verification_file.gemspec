@@ -4,7 +4,7 @@ require_relative "lib/jekyll-glossary_tooltip/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-glossary_tooltip"
-  spec.version       = Jekyll::GoogleSearchConsoleVerificationFile::VERSION
+  spec.version       = Jekyll::GlossaryTooltip::VERSION
   spec.authors       = ["Erik Westrup"]
   spec.email         = ["erik.westrup@gmail.com"]
 

@@ -2,7 +2,7 @@
 
 require "fileutils"
 
-RSpec.describe Jekyll::GoogleSearchConsoleVerificationFile::Generator do
+RSpec.describe Jekyll::GlossaryTooltip::Generator do
   context "when a site is correctly configured" do
     after(:all) { remove_dest_dir }
 

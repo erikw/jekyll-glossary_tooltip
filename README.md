@@ -93,7 +93,7 @@ Following instructions from [bundler.io](https://bundler.io/guides/creating_gem.
 ```console
 $ vi -p lib/jekyll-glossary_tooltip/version.rb CHANGELOG.md
 $ bundle exec rake build
-$ ver=$(ruby -r jekyll-glossary_tooltip/version -e 'puts Jekyll::GoogleSearchConsoleVerificationFile::VERSION')
+$ ver=$(ruby -r jekyll-glossary_tooltip/version -e 'puts Jekyll::GlossaryTooltip::VERSION')
 
 # Optional: test locally by including in another project
 $ gem install pkg/jekyll-glossary_tooltip-$ver.gem

@@ -3,7 +3,7 @@
 require "jekyll"
 
 module Jekyll
-  module GoogleSearchConsoleVerificationFile
+  module GlossaryTooltip
     # Generator for the verification file.
     class Generator < Jekyll::Generator
       safe true

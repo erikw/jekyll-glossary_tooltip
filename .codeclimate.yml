@@ -1,0 +1,23 @@
+# Reference: https://docs.codeclimate.com/docs/advanced-configuration#section-checks
+# Reference of plugins: https://docs.codeclimate.com/docs/list-of-engines
+
+version: "2"
+plugins:
+  rubocop:
+    enabled: true
+  fixme:
+    enabled: true
+  eslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+ratings:
+  paths:
+  - "**.rb"
+  - "**.js"
+exclude_paths:
+- script/

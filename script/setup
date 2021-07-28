@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+set -vx
+
+rvm install ruby-$(cat .ruby-version)
+gem install bundler -v 2.2.18
+bundle install

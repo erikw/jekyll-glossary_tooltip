@@ -1,0 +1,133 @@
+# See pages relaed at https://docs.rubocop.org/rubocop/1.12/cops_layout.html
+
+# Rubocop extensions
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.0
+  Include:
+  - lib/**/*.rb
+  - spec/**/*.rb
+  Exclude:
+  # Travis: during build there will be a lot of rubocop config files in this pat which will cause build failure as the refer to gems which are not installed by this project.
+  # See https://github.com/rubocop/rubocop/issues/9832
+  - gemfiles/vendor/bundle/**/*
+
+Gemspec/DateAssignment:
+  Enabled: true
+
+Layout/LineEndStringConcatenationIndentation:
+  Enabled: true
+
+Lint/AmbiguousAssignment:
+  Enabled: true
+Lint/DeprecatedConstants:
+  Enabled: true
+Lint/DuplicateBranch:
+  Enabled: true
+Lint/DuplicateRegexpCharacterClassElement:
+  Enabled: true
+Lint/EmptyBlock:
+  Enabled: true
+Lint/EmptyClass:
+  Enabled: true
+Lint/EmptyInPattern:
+  Enabled: true
+Lint/LambdaWithoutLiteralBlock:
+  Enabled: true
+Layout/LineLength:
+  Max: 120
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
+Lint/NumberedParameterAssignment:
+  Enabled: true
+Lint/OrAssignmentToConstant:
+  Enabled: true
+Lint/RedundantDirGlobSort:
+  Enabled: true
+Layout/SpaceBeforeBrackets:
+  Enabled: true
+Lint/SymbolConversion:
+  Enabled: true
+Lint/ToEnumArguments:
+  Enabled: true
+Lint/TripleQuotes:
+  Enabled: true
+Lint/UnexpectedBlockArity:
+  Enabled: true
+Lint/UnmodifiedReduceAccumulator:
+  Enabled: true
+Lint/UnreachableCode:
+  Severity: error
+Lint/UselessAccessModifier:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Max: 100
+
+Naming/FileName:
+  Enabled: false
+  Exclude:
+  - lib/jekyll-google_search_console_verification_file.rb
+Naming/InclusiveLanguage:
+  Enabled: true
+
+Style/ArgumentsForwarding:
+  Enabled: true
+Style/CollectionCompact:
+  Enabled: true
+Style/DocumentDynamicEvalDefinition:
+  Enabled: true
+Style/EndlessMethod:
+  Enabled: true
+Style/HashConversion:
+  Enabled: true
+Style/HashExcept:
+  Enabled: true
+Style/IfWithBooleanLiteralBranches:
+  Enabled: true
+Style/InPatternThen:
+  Enabled: true
+Style/MultilineInPatternThen:
+  Enabled: true
+Style/NegatedIfElseCondition:
+  Enabled: true
+Style/NilLambda:
+  Enabled: true
+Style/QuotedSymbols:
+  Enabled: true
+Style/RedundantArgument:
+  Enabled: true
+Style/StringChars:
+  Enabled: true
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+Style/SwapValues:
+  Enabled: true
+
+
+# Reference: https://github.com/rubocop/rubocop-rake/blob/master/config/default.yml
+Rake:
+  Enabled: true
+
+# Reference:
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html
+# https://github.com/rubocop/rubocop-rspec/blob/master/config/default.yml
+RSpec:
+  Enabled: true
+RSpec/FilePath:
+ # Disable to match structure of lib/. For jekyll plugin inclusion convention features, not having lib/jekyll/sth.rb but lib/jekyll-sth.rb
+  Enabled: false
+RSpec/IdenticalEqualityAssertion:
+  Enabled: true
+RSpec/Rails/AvoidSetupHook:
+  Enabled: false
+RSpec/BeforeAfterAll:
+  Enabled: false

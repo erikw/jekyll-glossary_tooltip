@@ -41,7 +41,7 @@ module Jekyll
       end
 
       # Get path of the template file.
-      def source_path(file = "jekyll-google_search_console_verification_file/template.html")
+      def source_path(file = "jekyll-glossary_tooltip/template.html")
         File.expand_path "../#{file}", __dir__
       end
 

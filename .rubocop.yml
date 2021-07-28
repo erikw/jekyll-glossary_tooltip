@@ -71,7 +71,7 @@ Metrics/BlockLength:
 Naming/FileName:
   Enabled: false
   Exclude:
-  - lib/jekyll-google_search_console_verification_file.rb
+  - lib/jekyll-glossary_tooltip.rb
 Naming/InclusiveLanguage:
   Enabled: true
 

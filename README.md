@@ -1,9 +1,9 @@
 # Jekyll Google Search Console Verification File Generator Plugin
-[![Gem Version](https://badge.fury.io/rb/jekyll-google_search_console_verification_file.svg)](https://badge.fury.io/rb/jekyll-google_search_console_verification_file)
-[![Gem Downloads](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-google_search_console_verification_file?color=brightgreen&type=total&label=gem%20downloads)](https://rubygems.org/gems/jekyll-google_search_console_verification_file)
-[![Travis Build Status](https://img.shields.io/travis/erikw/jekyll-google_search_console_verification_file/main?logo=travis)](https://travis-ci.com/erikw/jekyll-google_search_console_verification_file)
-[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/59050f3f66ed1f1ee32e/maintainability)](https://codeclimate.com/github/erikw/jekyll-google_search_console_verification_file/maintainability)
-[![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/59050f3f66ed1f1ee32e/test_coverage)](https://codeclimate.com/github/erikw/jekyll-google_search_console_verification_file/test_coverage)
+[![Gem Version](https://badge.fury.io/rb/jekyll-glossary_tooltip.svg)](https://badge.fury.io/rb/jekyll-glossary_tooltip)
+[![Gem Downloads](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-glossary_tooltip?color=brightgreen&type=total&label=gem%20downloads)](https://rubygems.org/gems/jekyll-glossary_tooltip)
+[![Travis Build Status](https://img.shields.io/travis/erikw/jekyll-glossary_tooltip/main?logo=travis)](https://travis-ci.com/erikw/jekyll-glossary_tooltip)
+[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/59050f3f66ed1f1ee32e/maintainability)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/maintainability)
+[![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/59050f3f66ed1f1ee32e/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
 
 
 
@@ -73,30 +73,30 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Local development
 Following the setup at [how-to-specify-local-ruby-gems-in-your-gemfile](https://rossta.net/blog/how-to-specify-local-ruby-gems-in-your-gemfile.html), these are the steps needed to build a jekyll site with a local clone of this plugin for local testing.
 
-1. Clone this repo to your machine, say at `~/src/jekyll-google_search_console_verification_file`
+1. Clone this repo to your machine, say at `~/src/jekyll-glossary_tooltip`
 1. In your Jekyll project's `Gemfile`:
-   - Remove the `gem 'jekyll-google_search_console_verification_file'` part
-   - Add instead `gem 'jekyll-google_search_console_verification_file', github: 'erikw/jekyll-google_search_console_verification_file', branch: 'main'`
+   - Remove the `gem 'jekyll-glossary_tooltip'` part
+   - Add instead `gem 'jekyll-glossary_tooltip', github: 'erikw/jekyll-glossary_tooltip', branch: 'main'`
 1. Configure bundler to use a local path for this gem in this project:
-   - `$ bundle config --local local.jekyll-google_search_console_verification_file ~/src/jekyll-google_search_console_verification_file`
+   - `$ bundle config --local local.jekyll-glossary_tooltip ~/src/jekyll-glossary_tooltip`
 1. Update the project: `$ bundle install`
 1. Now the project will build with the local clone of this plugin when issuing e.g. `bundle exec jekyll build`
 1. When you're done:
-  - Remove the local override with: `$ bundle config --delete local.jekyll-google_search_console_verification_file`
+  - Remove the local override with: `$ bundle config --delete local.jekyll-glossary_tooltip`
   - Optionally restore the original gem include in `Gemfile` or keep building from a branch in the github repo.
 
 ## Releasing
-Instructions for relasing on rubygems.org below. Optionally make a GitHub [release](https://github.com/erikw/jekyll-google_search_console_verification_file/releases) after this for the pushed git tag.
+Instructions for relasing on rubygems.org below. Optionally make a GitHub [release](https://github.com/erikw/jekyll-glossary_tooltip/releases) after this for the pushed git tag.
 
 ## Using bundler/gem_tasks rake tasks
 Following instructions from [bundler.io](https://bundler.io/guides/creating_gem.html#releasing-the-gem):
 ```console
-$ vi -p lib/jekyll-google_search_console_verification_file/version.rb CHANGELOG.md
+$ vi -p lib/jekyll-glossary_tooltip/version.rb CHANGELOG.md
 $ bundle exec rake build
-$ ver=$(ruby -r jekyll-google_search_console_verification_file/version -e 'puts Jekyll::GoogleSearchConsoleVerificationFile::VERSION')
+$ ver=$(ruby -r jekyll-glossary_tooltip/version -e 'puts Jekyll::GoogleSearchConsoleVerificationFile::VERSION')
 
 # Optional: test locally by including in another project
-$ gem install pkg/jekyll-google_search_console_verification_file-$ver.gem
+$ gem install pkg/jekyll-glossary_tooltip-$ver.gem
 
 $ bundle exec rake release
 ```
@@ -151,7 +151,7 @@ To use the [travis cli client](https://github.com/travis-ci/travis.rb) (installe
    ```
 
 # Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/erikw/jekyll-google_search_console_verification_file.
+Bug reports and pull requests are welcome on GitHub at https://github.com/erikw/jekyll-glossary_tooltip.
 
 # License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

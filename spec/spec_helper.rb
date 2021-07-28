@@ -5,7 +5,7 @@ require "simplecov" # Must be before any application code.
 SimpleCov.command_name "test:bdd"
 
 require "jekyll"
-require "jekyll-google_search_console_verification_file"
+require "jekyll-glossary_tooltip"
 
 Jekyll.logger.log_level = :warn
 
@@ -40,7 +40,7 @@ RSpec.configure do |config|
   def config_defaults
     {
       "destination" => dest_dir,
-      "gems" => ["jekyll-google_search_console_verification_file"] # Called "plugins" in Jekyll >=3.5.0
+      "gems" => ["jekyll-glossary_tooltip"] # Called "plugins" in Jekyll >=3.5.0
     }.freeze
   end
 

@@ -9,7 +9,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["erik.westrup@gmail.com"]
 
   spec.summary       = "Generate a Google Search Console verification file from your _config.yml e.g. google47733b3288357e4.html to the root of your Jekyll site."
-  spec.description   = "This is a very simple plugin that will generate a Google Search Console (GSC from here) verification file to your _site/ directory in a Jekyll project. This file is used by GSC to verify that you own the site and looks for example like https://erikw.me/google47733b3288357e4.html."
+  spec.summary       = "Jekyll plugin providing a glossary liquid tag that will show a tooltip of a term definition in your site"
+  spec.description   = "TODO"
   spec.homepage      = "https://github.com/erikw/jekyll-glossary_tooltip/"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7", "< 4"

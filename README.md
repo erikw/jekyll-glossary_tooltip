@@ -1,4 +1,4 @@
-# Jekyll Google Search Console Verification File Generator Plugin
+# Jekyll Glossary Tooltip Tag Plugin
 [![Gem Version](https://badge.fury.io/rb/jekyll-glossary_tooltip.svg)](https://badge.fury.io/rb/jekyll-glossary_tooltip)
 [![Gem Downloads](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-glossary_tooltip?color=brightgreen&type=total&label=gem%20downloads)](https://rubygems.org/gems/jekyll-glossary_tooltip)
 [![Travis Build Status](https://img.shields.io/travis/erikw/jekyll-glossary_tooltip/main?logo=travis)](https://travis-ci.com/erikw/jekyll-glossary_tooltip)

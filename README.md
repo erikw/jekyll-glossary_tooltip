@@ -5,10 +5,9 @@
 [![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/59050f3f66ed1f1ee32e/maintainability)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/maintainability)
 [![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/59050f3f66ed1f1ee32e/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
 
-
 TODO make all badges work
 
-TODO plugin description
+This plugin simplifies for your readers and you by making it easy to define terms or abbrevivations that needs an explanation. Define a common dictionary of terms and their definition in a yaml file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definiton on mouse hover.
 
 
 # Installation

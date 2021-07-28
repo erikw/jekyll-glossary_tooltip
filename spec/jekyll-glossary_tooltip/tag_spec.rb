@@ -6,17 +6,14 @@ require "jekyll-glossary_tooltip/tag"
 
 RSpec.describe Jekyll::GlossaryTooltip::Tag do
   context "when a site is correctly configured" do
-    after(:all) { remove_dest_dir }
-
-    let(:site) do
-      site = make_site({ "source" => source_dir("normal") })
-      site.process
-      site
-    end
+    let(:site) { make_site({ "source" => source_dir("normal") }) }
+    before(:each) { site.process }
+    after(:each) { remove_dest_dir }
     let(:content) { File.read(dest_dir("page.html")) }
 
     it "renders a glossary tag" do
       expect(content).to match(%r$<span class="jekyll-glossary">$)
+      expect(content).to match(%r$<span class="jekyll-glossary-tooltip">$)
     end
 
 

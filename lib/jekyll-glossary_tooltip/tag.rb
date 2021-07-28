@@ -9,9 +9,6 @@ module Jekyll
   module GlossaryTooltip
     # Custom liquid tag definition.
     class GlossaryTag < Liquid::Tag
-        safe true
-        priority :normal
-
       def initialize(tag_name, text, tokens)
         super
         @text = text.strip
@@ -66,4 +63,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('glossary', Jekyll::GlossaryTag)
+Liquid::Template.register_tag('glossary', Jekyll::GlossaryTooltip::GlossaryTag)

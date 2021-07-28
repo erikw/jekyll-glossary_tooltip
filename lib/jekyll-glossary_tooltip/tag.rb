@@ -29,7 +29,7 @@ module Jekyll
     	LOG_TAG = "Glossary Tag:"
 
       def render_tooltip_url(entry)
-        entry.key?("url") and entry["url"] ? "<br><a class=\"jekyll-glossary-source-link\" href=\"#{entry["url"]}\">source</a>" : ""
+        entry.key?("url") and entry["url"] ? "<br><a class=\"jekyll-glossary-source-link\" href=\"#{entry["url"]}\"></a>" : ""
       end
 
     	def lookup_entry(site, term_name)

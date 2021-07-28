@@ -2,6 +2,8 @@
 
 require "fileutils"
 
+require "jekyll-glossary_tooltip/tag"
+
 RSpec.describe Jekyll::GlossaryTooltip::Tag do
   context "when a site is correctly configured" do
     after(:all) { remove_dest_dir }

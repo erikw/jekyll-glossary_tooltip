@@ -7,7 +7,7 @@ require "jekyll"
 
 module Jekyll
   module GlossaryTooltip
-    # Custom liquid tag definition.
+    # Custom liquid tag implementation.
     class Tag < Liquid::Tag
       def initialize(tag_name, text, tokens)
         super

@@ -5,7 +5,6 @@ require "simplecov" # Must be before any application code.
 SimpleCov.command_name "test:bdd"
 
 require "jekyll"
-require "jekyll-glossary_tooltip"
 
 Jekyll.logger.log_level = :warn
 

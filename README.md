@@ -29,6 +29,10 @@ This plugin simplifies for your readers and you by making it easy to define term
    $ bundle exec jekyll build
    ```
 
+
+# Configuration
+TODO describe format for glossary.yml
+
 # Development
 The structure of this plugin was inspired by [https://ayastreb.me/writing-a-jekyll-plugin/](https://ayastreb.me/writing-a-jekyll-plugin/), the plugin jekyll-sitemap and the [Bundler Gem tutorial](https://bundler.io/guides/creating_gem.html).
 

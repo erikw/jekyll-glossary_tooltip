@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "jekyll"
-require "jekyll-glossary_tooltip/errors/configuration"
+require "jekyll-glossary_tooltip/errors"
 
 # TODO raise correct object for exceptions
 # TODO use safe navigation if appropriate. What happens if key/attrib don't exist?
@@ -54,7 +54,7 @@ module Jekyll
         end
 
         if entries.length() == 0
-        	raise ArgumentError, "The term '#{term_name}' was not defined in the glossary"
+        	raise Errors::MissingTerm, "The term '#{term_name}' was not defined in the glossary"
         elsif entries.length() == 1
       	return entries[0]
         else

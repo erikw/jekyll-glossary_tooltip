@@ -3,7 +3,7 @@
 require "fileutils"
 
 require "jekyll-glossary_tooltip/tag"
-require "jekyll-glossary_tooltip/errors/configuration"
+require "jekyll-glossary_tooltip/errors"
 
 RSpec.describe Jekyll::GlossaryTooltip::Tag do
   after(:context) { remove_dest_dir }
@@ -51,7 +51,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_term") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(ArgumentError)
+	  expect { site.process }.to raise_error(Jekyll::GlossaryTooltip::Errors::MissingTerm)
     end
   end
 

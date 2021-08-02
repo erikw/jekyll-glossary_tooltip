@@ -6,3 +6,5 @@
 - term: TERM_CASE_INSENSITIVE
   definition: TERM_CASE_INSENSITIVE definition
   url: TERM_CASE_INSENSITIVE url
+- term: term with spaces
+  definition: term with spaces definition

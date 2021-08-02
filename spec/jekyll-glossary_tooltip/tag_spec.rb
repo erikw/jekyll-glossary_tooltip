@@ -27,7 +27,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
   end
 
   context "when a site is incorrectly configured (missing term definition)" do
-    let(:site) { make_site({ "source" => source_dir("missing_def") }) }
+    let(:site) { make_site({ "source" => source_dir("missing_definition") }) }
     after(:each) { remove_dest_dir }
 
     it "building the site will raise an error" do

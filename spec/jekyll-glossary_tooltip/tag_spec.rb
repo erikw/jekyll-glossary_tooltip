@@ -5,6 +5,8 @@ require "fileutils"
 require "jekyll-glossary_tooltip/tag"
 require "jekyll-glossary_tooltip/errors"
 
+include Jekyll::GlossaryTooltip  # Import namespace so we can access Errors:: easily.
+
 RSpec.describe Jekyll::GlossaryTooltip::Tag do
   after(:context) { remove_dest_dir }
 
@@ -35,7 +37,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_definition") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Jekyll::GlossaryTooltip::Errors::MissingTermDefinition)
+	  expect { site.process }.to raise_error(Errors::MissingTermDefinition)
     end
   end
 
@@ -43,7 +45,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_glossary") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Jekyll::GlossaryTooltip::Errors::NoGlossaryFile)
+	  expect { site.process }.to raise_error(Errors::NoGlossaryFile)
     end
   end
 
@@ -51,7 +53,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_term") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Jekyll::GlossaryTooltip::Errors::MissingTermEntry)
+	  expect { site.process }.to raise_error(Errors::MissingTermEntry)
     end
   end
 
@@ -59,7 +61,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("duplicate_term") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Jekyll::GlossaryTooltip::Errors::MultipleTermEntries)
+	  expect { site.process }.to raise_error(Errors::MultipleTermEntries)
     end
   end
 end

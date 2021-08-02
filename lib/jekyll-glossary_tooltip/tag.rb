@@ -35,9 +35,7 @@ module Jekyll
 
       def lookup_entry(site, term_name)
     	entry = read_term_entry_from_config(site, term_name)
-    	if not (entry.key?('definition') and entry['definition']) # TODO save navigation can also check of the value is non-zero?
-          raise Errors::MissingTermDefinition, "Glossary entry for #{term_name} does not contain a definition!"
-        end
+        raise Errors::MissingTermDefinition, term_name unless entry.key?('definition') and entry['definition']
         if not entry.key?('url')
           entry['url'] = nil
         end
@@ -46,18 +44,18 @@ module Jekyll
 
       # Retrieve a term from the glossary via the site.
       def read_term_entry_from_config(site, term_name)
-        raise Errors::NoGlossaryFile, "No data.glossary found" unless site.data['glossary']
+        raise Errors::NoGlossaryFile unless site.data['glossary']
 
         entries = site.data['glossary'].select do |entry|
           entry.key?('term') and term_name.casecmp(entry['term']) == 0
         end
 
         if entries.length() == 0
-          raise Errors::MissingTermEntry, "The term '#{term_name}' was not defined in the glossary"
+          raise Errors::MissingTermEntry, term_name
         elsif entries.length() == 1
       	  return entries[0]
         else
-          raise Errors::MultipleTermEntries, "The term #{term_name} was defined multiple times in the glossary"
+          raise Errors::MultipleTermEntries, term_name
     	end
       end
     end

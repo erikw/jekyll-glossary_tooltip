@@ -58,7 +58,7 @@ module Jekyll
         elsif entries.length() == 1
       	return entries[0]
         else
-        	raise ArgumentError, "The term #{term_name} was defined multiple times in the glossary"
+        	raise Errors::MultipleTermEntries, "The term #{term_name} was defined multiple times in the glossary"
     	  end
     	end
     end

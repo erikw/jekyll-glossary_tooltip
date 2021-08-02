@@ -59,7 +59,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("duplicate_term") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(ArgumentError)
+	  expect { site.process }.to raise_error(Jekyll::GlossaryTooltip::Errors::MultipleTermEntries)
     end
   end
 end

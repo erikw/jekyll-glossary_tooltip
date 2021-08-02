@@ -43,4 +43,13 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
 	  expect { site.process }.to raise_error(ArgumentError)
     end
   end
+
+  context "when a site is incorrectly configured (missing term in glossary)" do
+    let(:site) { make_site({ "source" => source_dir("missing_term") }) }
+    after(:each) { remove_dest_dir }
+
+    it "building the site will raise an error" do
+	  expect { site.process }.to raise_error(ArgumentError)
+    end
+  end
 end

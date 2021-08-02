@@ -3,3 +3,6 @@
   url: term_with_url url
 - term: term_without_url
   definition: term_without_url definition
+- term: TERM_CASE_INSENSITIVE
+  definition: term_case_insensitive definition
+  url: term_case_insensitive url

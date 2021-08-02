@@ -1,5 +1,5 @@
-- term: test
-  definition: Testing is the best practice during softwaer development to ensure that your program really does what you think or want it to do.
-  url: https://testing.com/
-- term: other
-  definition: other term
+- term: term_with_url
+  definition: term_with_url definition
+  url: term_with_url url
+- term: term_without_url
+  definition: term_without_url definition

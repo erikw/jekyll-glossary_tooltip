@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "jekyll"
+require "jekyll-glossary_tooltip/errors/configuration"
 
 # TODO raise correct object for exceptions
 # TODO use safe navigation if appropriate. What happens if key/attrib don't exist?
@@ -46,7 +47,7 @@ module Jekyll
 
     	# Retrieve a term from the glossary via the site.
     	def read_term_entry_from_config(site, term_name)
-        raise ArgumentError, "No data.glossary found" unless site.data['glossary']
+        raise Errors::NoGlossaryFile, "No data.glossary found" unless site.data['glossary']
 
         entries = site.data['glossary'].select do |entry|
           entry.key?('term') and term_name.casecmp(entry['term']) == 0

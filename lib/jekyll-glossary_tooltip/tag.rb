@@ -37,7 +37,7 @@ module Jekyll
     	def lookup_entry(site, term_name)
     	  entry = read_term_entry_from_config(site, term_name)
     	  if not (entry.key?('definition') and entry['definition']) # TODO save navigation can also check of the value is non-zero?
-          raise ArgumentError, "Glossary entry for #{term_name} does not contain a definition!"
+          raise Errors::MissingTermDefinition, "Glossary entry for #{term_name} does not contain a definition!"
         end
         if not entry.key?('url')
           entry['url'] = nil
@@ -54,7 +54,7 @@ module Jekyll
         end
 
         if entries.length() == 0
-        	raise Errors::MissingTerm, "The term '#{term_name}' was not defined in the glossary"
+        	raise Errors::MissingTermEntry, "The term '#{term_name}' was not defined in the glossary"
         elsif entries.length() == 1
       	return entries[0]
         else

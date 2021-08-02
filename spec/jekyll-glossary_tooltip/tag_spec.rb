@@ -35,7 +35,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_definition") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(ArgumentError)
+	  expect { site.process }.to raise_error(Jekyll::GlossaryTooltip::Errors::MissingTermDefinition)
     end
   end
 
@@ -51,7 +51,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_term") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Jekyll::GlossaryTooltip::Errors::MissingTerm)
+	  expect { site.process }.to raise_error(Jekyll::GlossaryTooltip::Errors::MissingTermEntry)
     end
   end
 

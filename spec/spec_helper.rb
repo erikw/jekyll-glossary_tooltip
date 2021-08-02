@@ -65,9 +65,9 @@ RSpec.configure do |config|
   def expect_tag_match(content, term_name, url=true)
 	regex = %r/#{R1}#{term_name}#{R2}#{term_name} definition/
 	if url
-		regex = Regexp.new(regex.source, %r/#{R3}#{term_name} url#{R4}/)
+	  regex = Regexp.new(regex.source + %r/#{R3}#{term_name} url#{R4}/.source)
   	end
-	regex = Regexp.new(regex.source, %r/#{R5}/)
+	regex = Regexp.new(regex.source + %r/#{R5}/.source)
 
     expect(content).to match(regex)
   end

@@ -19,18 +19,24 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:page1) { File.read(dest_dir("page1.html")) }
 	let(:page2) { File.read(dest_dir("page2.html")) }
 	let(:page3) { File.read(dest_dir("page3.html")) }
+	#let(:page4) { File.read(dest_dir("page4.html")) }
 
     it "renders a glossary tag with a URL" do
-      expect_tag_match(page1, "term_with_url", url=true)
+      expect_tag_match(page1, "term_with_url")
     end
 
 	it "renders a glossary tag without a URL" do
-      expect_tag_match(page2, "term_without_url", url=true)
+      expect_tag_match(page2, "term_without_url", url=false)
 	end
 
     it "renders a glossary tag from case insensitive lookup" do
-      expect_tag_match(page3, "TERM_CASE_INSENSITIVE", url=true)
+      expect_tag_match(page3, "TERM_CASE_INSENSITIVE")
     end
+
+    # TODO not sure if this will work, let's test....!
+    #it "renders a glossary tag having spaces" do
+      #expect_tag_match(page3, "term with spaces")
+    #end
   end
 
   context "when a site is incorrectly configured (missing term definition)" do

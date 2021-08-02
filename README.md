@@ -35,7 +35,7 @@ This plugin simplifies for your readers and you by making it easy to define term
 # Configuration
 TODO describe format for glossary.yml
 
-# Tag usage
+# Tag Usage
 TODO describe usage of the tag. Mention case-insensitive matching
 
 # Development

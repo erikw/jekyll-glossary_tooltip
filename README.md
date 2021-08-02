@@ -23,7 +23,9 @@ This plugin simplifies for your readers and you by making it easy to define term
    plugins:
      - jekyll-glossary_tooltip
    ```
-1. TODO explain data/glossary.yml
+1. Create a `_data/glossary.yml` file according to format description in a subsection below with your terms.
+1. Use the liquid tag in a page like `{% glossary term_name %} `
+1. TODO setup CSS
 1. Now just build your site and verify that the verification file now exist!
    ```console
    $ bundle exec jekyll build
@@ -32,6 +34,9 @@ This plugin simplifies for your readers and you by making it easy to define term
 
 # Configuration
 TODO describe format for glossary.yml
+
+# Tag usage
+TODO describe usage of the tag. Mention case-insensitive matching
 
 # Development
 The structure of this plugin was inspired by [https://ayastreb.me/writing-a-jekyll-plugin/](https://ayastreb.me/writing-a-jekyll-plugin/), the plugin jekyll-sitemap and the [Bundler Gem tutorial](https://bundler.io/guides/creating_gem.html).

@@ -30,7 +30,15 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_def") }) }
     after(:each) { remove_dest_dir }
 
-    let(:page) { File.read(dest_dir("page.html")) }
+    it "building the site will raise an error" do
+	  expect { site.process }.to raise_error(ArgumentError)
+    end
+  end
+
+  context "when a site is incorrectly configured (missing glossary file)" do
+    let(:site) { make_site({ "source" => source_dir("missing_glossary") }) }
+    after(:each) { remove_dest_dir }
+
     it "building the site will raise an error" do
 	  expect { site.process }.to raise_error(ArgumentError)
     end

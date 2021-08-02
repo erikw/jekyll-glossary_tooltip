@@ -3,8 +3,6 @@
 require "jekyll"
 require "jekyll-glossary_tooltip/errors"
 
-# TODO use safe navigation if appropriate. What happens if key/attrib don't exist?
-
 module Jekyll
   module GlossaryTooltip
     # Custom liquid tag implementation.
@@ -30,15 +28,13 @@ module Jekyll
 
       def render_tooltip_url(entry)
         # The content of the anchor is set from the CSS class jekyll-glossary-source-link, so that the plugin user can customize the text without touching ruby source.
-        entry.key?("url") and entry["url"] ? "<br><a class=\"jekyll-glossary-source-link\" href=\"#{entry["url"]}\"></a>" : ""
+        entry["url"] ? "<br><a class=\"jekyll-glossary-source-link\" href=\"#{entry["url"]}\"></a>" : ""
       end
 
       def lookup_entry(site, term_name)
     	entry = read_term_entry_from_config(site, term_name)
-        raise Errors::MissingTermDefinition, term_name unless entry.key?('definition') and entry['definition']
-        if not entry.key?('url')
-          entry['url'] = nil
-        end
+        raise Errors::MissingTermDefinition, term_name unless entry['definition']
+        entry["url"] = nil unless entry.key?("url")
         entry
       end
 

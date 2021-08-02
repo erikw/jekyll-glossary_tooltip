@@ -10,26 +10,19 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     before(:each) { site.process }
     after(:each) { remove_dest_dir }
 
-    let(:r1) { %r{<span class="jekyll-glossary">\s*} }
-    let(:r2) { %r{\s*<span class="jekyll-glossary-tooltip">\s*} }
-  	let(:r3) { %r{\s*<br(\s/)?><a class="jekyll-glossary-source-link" href="} }
-  	let(:r4) { %r{"></a>\s*} }
-	let(:r5) { %r{</span>\s*</span>} }
-
     let(:page1) { File.read(dest_dir("page1.html")) }
     it "renders a glossary tag with a URL" do
-	  # TODO extract this to helper assert function?
-      expect(page1).to match(%r/#{r1}term_with_url#{r2}term_with_url definition#{r3}term_with_url url#{r4}#{r5}/)
+      expect_tag_match(page1, "term_with_url", url=true)
     end
 
 	let(:page2) { File.read(dest_dir("page2.html")) }
 	it "renders a glossary tag without a URL" do
-	  expect(page2).to match(%r/#{r1}term_without_url#{r2}term_without_url definition#{r5}/)
+      expect_tag_match(page2, "term_without_url", url=true)
 	end
 
 	let(:page3) { File.read(dest_dir("page3.html")) }
     it "renders a glossary tag from case insensitive lookup" do
-      expect(page3).to match(%r/#{r1}TERM_CASE_INSENSITIVE#{r2}term_case_insensitive definition#{r3}term_case_insensitive url#{r4}#{r5}/)
+      expect_tag_match(page3, "TERM_CASE_INSENSITIVE", url=true)
     end
 
     #let(:code) { site.config["google_search_console"]["verification_file_code"] }

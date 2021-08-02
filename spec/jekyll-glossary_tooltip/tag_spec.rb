@@ -41,6 +41,14 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     end
   end
 
+  context "when a site is incorrectly configured (empty term definition)" do
+    let(:site) { make_site({ "source" => source_dir("empty_definition") }) }
+
+    it "building the site will raise an error" do
+	  expect { site.process }.to raise_error(Errors::MissingTermDefinition)
+    end
+  end
+
   context "when a site is incorrectly configured (missing glossary file)" do
     let(:site) { make_site({ "source" => source_dir("missing_glossary") }) }
 

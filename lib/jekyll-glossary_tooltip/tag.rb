@@ -3,7 +3,6 @@
 require "jekyll"
 require "jekyll-glossary_tooltip/errors"
 
-# TODO raise correct object for exceptions
 # TODO use safe navigation if appropriate. What happens if key/attrib don't exist?
 
 module Jekyll

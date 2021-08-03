@@ -9,14 +9,14 @@ module Jekyll
     class Tag < Liquid::Tag
       def initialize(tag_name, text, tokens)
         super
-        @text = text.strip
+        @term_query = text.strip
       end
 
       def render(context)
-        entry = lookup_entry(context.registers[:site], @text)
+        entry = lookup_entry(context.registers[:site], @term_query)
         <<~HTML
           <span class="jekyll-glossary">
-             #{@text}
+             #{@term_query}
              <span class="jekyll-glossary-tooltip">#{entry['definition']}#{render_tooltip_url(entry)}</span>
           </span>
         HTML

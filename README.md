@@ -23,28 +23,50 @@ This plugin simplifies for your readers and you by making it easy to define term
    plugins:
      - jekyll-glossary_tooltip
    ```
-1. Create a `_data/glossary.yml` file according to format description in a subsection below with your terms.
-1. Use the liquid tag in a page like `{% glossary term_name %} `
+1. Create a `_data/glossary.yml` file, according to the 'Glossary Term Definitin FIle' section below, with your terms.
+1. Use the liquid tag in a page like `{% glossary term_name %}`
 1. TODO setup CSS
-1. Now just build your site and verify that the verification file now exist!
+1. Now just build your site and you will get nice nice term definition tooltips on mouse hover (or mobile, tap) for you terms!
    ```console
    $ bundle exec jekyll build
    ```
 
 
-# Configuration
-TODO describe format for glossary.yml
+# Glossary Term Definition File
+Create a file `_data/glossary.yml` to host your shared term definition entries. This file should contain a list of term entries like
+
+```markdown
+- term: a_term_name           # Can contain spaces
+  definition: A description of the term
+  url: https://jekyllrb.com/  # Is optional
+- term: another term
+  definition: Some other term definition text
+```
+
+This could look something like:
+```markdown
+- term: Jekyll
+  definition: A Static Site Generator (SSG) built with ruby. Widely adopted as of GitHub Pages inclusion.
+  url: https://jekyllrb.com/
+- term: SSG
+  definition: A Static Site Generator compiles the website before deployment. Then the generated web content is simply retrieved as-is by the client without any code running at retrieve time.
+- term: Jamstack
+  definition: JavaScript + API + Markup - a way of buildin and hosting websites.
+  url: https://jamstack.org/
+```
+
+
 
 # Tag Usage
 On any page where you've made sure include the needed CSS styling, you can use the glossary tag simply like
+
 ```markdown
 Here I'm taling about {% glossary term_name %} in a blog post.
 
 The term name can contain spaces like {% glossary operating system }.
 
-Even if the term is defined in _data/glossary.yml as 'term_name', the matching is case-insensitive meaning that I can look it up using {% glossary TeRM_NaME %}. Note that the term is displayed as defined in the tag rather than the definition.
+Even if the term is defined in _data/glossary.yml as 'term_name', the matching is case-insensitive meaning that I can look it up using {% glossary TeRM_NaME %}. Note that the term is displayed as defined in the tag rather than the definition, here meaing 'TeRM_NaME'.
 ```
-TODO describe usage of the tag. Mention case-insensitive matching
 
 # Development
 The structure of this plugin was inspired by [https://ayastreb.me/writing-a-jekyll-plugin/](https://ayastreb.me/writing-a-jekyll-plugin/), the plugin jekyll-sitemap and the [Bundler Gem tutorial](https://bundler.io/guides/creating_gem.html).

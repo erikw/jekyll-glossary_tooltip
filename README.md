@@ -7,7 +7,7 @@
 
 TODO make all badges work
 
-This plugin simplifies for your readers and you by making it easy to define terms or abbrevivations that needs an explanation. Define a common dictionary of terms and their definition in a yaml file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definiton on mouse hover.
+This plugin simplifies for your readers and you by making it easy to define terms or abbreviations that needs an explanation. Define a common dictionary of terms and their definition in a YAML file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definition on mouse hover.
 
 
 # Installation
@@ -36,6 +36,14 @@ This plugin simplifies for your readers and you by making it easy to define term
 TODO describe format for glossary.yml
 
 # Tag Usage
+On any page where you've made sure include the needed CSS styling, you can use the glossary tag simply like
+```markdown
+Here I'm taling about {% glossary term_name %} in a blog post.
+
+The term name can contain spaces like {% glossary operating system }.
+
+Even if the term is defined in _data/glossary.yml as 'term_name', the matching is case-insensitive meaning that I can look it up using {% glossary TeRM_NaME %}. Note that the term is displayed as defined in the tag rather than the definition.
+```
 TODO describe usage of the tag. Mention case-insensitive matching
 
 # Development

@@ -30,7 +30,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
 	end
 
     it "renders a glossary tag from case insensitive lookup" do
-      expect_tag_match(page3, "TERM_CASE_INSENSITIVE")
+      expect_tag_match(page3,"TERM_CASE_INSENSITIVE", url=true, term_display="TerM_Case_Insensitive")
     end
 
     it "renders a glossary tag having spaces" do

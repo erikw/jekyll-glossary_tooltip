@@ -16,7 +16,7 @@ module Jekyll
         entry = lookup_entry(context.registers[:site], @text)
         <<~HTML
           <span class="jekyll-glossary">
-             #{entry['term']}
+             #{@text}
              <span class="jekyll-glossary-tooltip">#{entry['definition']}#{render_tooltip_url(entry)}</span>
           </span>
         HTML

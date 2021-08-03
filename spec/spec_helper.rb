@@ -62,8 +62,10 @@ RSpec.configure do |config|
   end
 
   # Expect HTML tag components to match given content.
-  def expect_tag_match(content, term_name, url=true)
-	regex = %r/#{R1}#{term_name}#{R2}#{term_name} definition/
+  def expect_tag_match(content, term_name, url=true, term_display=nil)
+    term_display = term_display ? term_display : term_name
+
+	regex = %r/#{R1}#{term_display}#{R2}#{term_name} definition/
 	if url
 	  regex = Regexp.new(regex.source + %r/#{R3}#{term_name} url#{R4}/.source)
   	end

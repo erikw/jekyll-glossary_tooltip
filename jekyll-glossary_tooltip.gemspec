@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["erik.westrup@gmail.com"]
 
   spec.summary       = "Jekyll plugin providing a glossary liquid tag that will show a tooltip of a term definition in your site"
-  spec.description   = "This plugin simplifies for your readers and you by making it easy to define terms or abbrevivations that needs an explanation. Define a common dictionary of terms and their definition in a yaml file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definiton on mouse hover."
+  spec.description   = "This plugin simplifies for your readers and you by making it easy to define terms or abbreviations that needs an explanation. Define a common dictionary of terms and their definition in a YAML file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definition on mouse hover."
   spec.homepage      = "https://github.com/erikw/jekyll-glossary_tooltip/"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7", "< 4"

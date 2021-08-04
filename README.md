@@ -8,7 +8,7 @@
 TODO make all badges work
 
 <figure style="float: right">
-  <img align=src="/img/tooltip_screenshot.png" width="256" alt="Screenshot of the glossary tooltip term definition" title="Example of tooltip definition of the term 'Jekyll'.">
+  <img src="/img/tooltip_screenshot.png" width="256" alt="Screenshot of the glossary tooltip term definition" title="Example of tooltip definition of the term 'Jekyll'.">
   <figcaption>Example of tooltip definition of the term 'Jekyll'.</figcaption>
 </figure>
 

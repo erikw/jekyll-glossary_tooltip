@@ -26,15 +26,15 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     end
 
 	it "renders a glossary tag without a URL" do
-      expect_tag_match(page2, "term_without_url", url=false)
+      expect_tag_match(page2, "term_without_url", :url=>false )
 	end
 
     it "renders a glossary tag from case insensitive lookup" do
-      expect_tag_match(page3,"TERM_CASE_INSENSITIVE", url=true, term_display="TerM_Case_Insensitive")
+      expect_tag_match(page3,"TERM_CASE_INSENSITIVE", :term_display=>"TerM_Case_Insensitive")
     end
 
     it "renders a glossary tag having spaces" do
-      expect_tag_match(page4, "term with spaces", url=false)
+      expect_tag_match(page4, "term with spaces", :url=>false)
     end
   end
 

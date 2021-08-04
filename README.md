@@ -9,6 +9,8 @@ TODO make all badges work
 
 This plugin simplifies for your readers and you by making it easy to define terms or abbreviations that needs an explanation. Define a common dictionary of terms and their definition in a YAML file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definition on mouse hover.
 
+It's also possible to provide an optional URL to further term definition or source reference. To also support mobile devices, this URL link is placed inside the tooltip pop-up itself, rather than making the term itself clickable. This is so that on mobile device, you will first tap the word to get the hover tooltip, then click the link in the tooltip if desired.
+
 
 # Installation
 1. Add this gem to your Jekyll site's Gemfile
@@ -23,9 +25,9 @@ This plugin simplifies for your readers and you by making it easy to define term
    plugins:
      - jekyll-glossary_tooltip
    ```
-1. Create a `_data/glossary.yml` file, according to the 'Glossary Term Definitin FIle' section below, with your terms.
+1. Create a `_data/glossary.yml` file, according to the 'Glossary Term Definition File' section below, with your terms.
 1. Use the liquid tag in a page like `{% glossary term_name %}`
-1. Add CSS styling for the tooltip from [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css). You need to make sure that the pages where you will use the glossary tag have this styling applied. Typically this would mean 1) copying this file to your `assets/css/` directory 2) editing your theme's template for blog posts (or what pages you desire) to include this css in the header like `<link rel="stylesheet" href="/assets/css/jekyll-glossary_tooltip.css">`. However you could also copy this file's content in to your `main.css` or `main.scss` or however you build your site's CSS.
+1. Add CSS styling for the tooltip from [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css). You need to make sure that the pages where you will use the glossary tag have this styling applied. Typically this would mean 1) copying this file to your `assets/css/` directory 2) editing your theme's template for blog posts (or what pages you desire) to include this CSS in the header like `<link rel="stylesheet" href="/assets/css/jekyll-glossary_tooltip.css">`. However you could also copy this file's content in to your `main.css` or `main.scss` or however you build your site's CSS.
 1. Now just build your site and you will get nice nice term definition tooltips on mouse hover (or mobile, tap) for you terms!
    ```console
    $ bundle exec jekyll build
@@ -100,7 +102,7 @@ Following the setup at [how-to-specify-local-ruby-gems-in-your-gemfile](https://
   - Optionally restore the original gem include in `Gemfile` or keep building from a branch in the github repo.
 
 ## Releasing
-Instructions for relasing on rubygems.org below. Optionally make a GitHub [release](https://github.com/erikw/jekyll-glossary_tooltip/releases) after this for the pushed git tag.
+Instructions for releasing on rubygems.org below. Optionally make a GitHub [release](https://github.com/erikw/jekyll-glossary_tooltip/releases) after this for the pushed git tag.
 
 ## Using bundler/gem_tasks rake tasks
 Following instructions from [bundler.io](https://bundler.io/guides/creating_gem.html#releasing-the-gem):

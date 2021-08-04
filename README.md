@@ -7,10 +7,7 @@
 
 TODO make all badges work
 
-<figure align="right">
-  <img src="/img/tooltip_screenshot.png" width="256" alt="Screenshot of the glossary tooltip term definition" title="Example of tooltip definition of the term 'Jekyll'.">
-  <figcaption>Example of tooltip definition of the term 'Jekyll'.</figcaption>
-</figure>
+<img src="/img/tooltip_screenshot.png" width="256" align="right" alt="Screenshot of the glossary tooltip term definition" title="Example of tooltip definition of the term 'Jekyll'.">
 
 
 This plugin simplifies for your readers and you by making it easy to define terms or abbreviations that needs an explanation. Define a common dictionary of terms and their definition in a YAML file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definition on mouse hover.

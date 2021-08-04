@@ -25,14 +25,14 @@ This plugin simplifies for your readers and you by making it easy to define term
    ```
 1. Create a `_data/glossary.yml` file, according to the 'Glossary Term Definitin FIle' section below, with your terms.
 1. Use the liquid tag in a page like `{% glossary term_name %}`
-1. TODO setup CSS
+1. Add CSS styling for the tooltip from [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css). You need to make sure that the pages where you will use the glossary tag have this styling applied. Typically this would mean 1) copying this file to your `assets/css/` directory 2) editing your theme's template for blog posts (or what pages you desire) to include this css in the header like `<link rel="stylesheet" href="/assets/css/jekyll-glossary_tooltip.css">`. However you could also copy this file's content in to your `main.css` or `main.scss` or however you build your site's CSS.
 1. Now just build your site and you will get nice nice term definition tooltips on mouse hover (or mobile, tap) for you terms!
    ```console
    $ bundle exec jekyll build
    ```
 
-
-# Glossary Term Definition File
+# Usage
+## Glossary Term Definition File
 Create a file `_data/glossary.yml` to host your shared term definition entries. This file should contain a list of term entries like
 
 ```markdown
@@ -56,8 +56,7 @@ This could look something like:
 ```
 
 
-
-# Tag Usage
+## Tag Usage
 On any page where you've made sure include the needed CSS styling, you can use the glossary tag simply like
 
 ```markdown
@@ -67,6 +66,11 @@ The term name can contain spaces like {% glossary operating system }.
 
 Even if the term is defined in _data/glossary.yml as 'term_name', the matching is case-insensitive meaning that I can look it up using {% glossary TeRM_NaME %}. Note that the term is displayed as defined in the tag rather than the definition, here meaing 'TeRM_NaME'.
 ```
+
+
+## CSS Style Override
+Simply modify the rules [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css) that you copied to your project. The tooltip is based on this [tutorial](https://www.w3schools.com/css/css_tooltip.asp). View the generated HTML output to see the HTML tags that are styled, or check the [tag.rb](lib/jekyll-glossary_tooltip/tag.rb) implementation in the method `render()`.
+
 
 # Development
 The structure of this plugin was inspired by [https://ayastreb.me/writing-a-jekyll-plugin/](https://ayastreb.me/writing-a-jekyll-plugin/), the plugin jekyll-sitemap and the [Bundler Gem tutorial](https://bundler.io/guides/creating_gem.html).

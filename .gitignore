@@ -1,0 +1,21 @@
+# Contrary to ruby apps, ruby gems should not check in Gemfile.lock.
+# Reference: https://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/
+Gemfile.lock
+# Same for Appraisals generated Gemfiles
+gemfiles/*gemfile.lock
+gemfiles/Gemfile*.lock
+
+# Bundle local config
+.bundle/
+
+# Package gem from ($rake install)
+pkg/
+
+# simplecov
+coverage/
+
+# rspec
+.jekyll-cache/
+.rspec_status
+spec/dest/
+spec/reports/

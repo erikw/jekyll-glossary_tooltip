@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+set -eux
+bundle exec rake spec $*

@@ -1,0 +1,3 @@
+--ignore-dir=coverage/
+--ignore-dir=spec/dest
+--ignore-dir=.jekyll-cache

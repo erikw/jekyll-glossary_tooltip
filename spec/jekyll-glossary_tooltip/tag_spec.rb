@@ -20,6 +20,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:page2) { File.read(dest_dir("page2.html")) }
     let(:page3) { File.read(dest_dir("page3.html")) }
     let(:page4) { File.read(dest_dir("page4.html")) }
+    let(:page5) { File.read(dest_dir("page5.html")) }
 
     it "renders a glossary tag with a URL" do
       expect_tag_match(page1, "term_with_url")
@@ -35,6 +36,10 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
 
     it "renders a glossary tag having spaces" do
       expect_tag_match(page4, "term with spaces", url: false)
+    end
+
+    it "renders a glossary tag with alternative display name" do
+      expect_tag_match(page5, "term_with_url", term_display: "term alt display name")
     end
   end
 
@@ -82,7 +87,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_tag_arg") }) }
 
     it "building the site will raise an error" do
-      expect { site.process }.to raise_error(E::NoTermNameInTag)
+      expect { site.process }.to raise_error(E::OptionsNoTermNameInTag)
     end
   end
 end

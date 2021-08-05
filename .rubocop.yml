@@ -68,12 +68,15 @@ Lint/UnreachableCode:
 Lint/UselessAccessModifier:
   Enabled: false
 
+Metrics/AbcSize:
+  Enabled: true
+  Max: 25
 Metrics/BlockLength:
   Enabled: true
   Max: 100
 Metrics/MethodLength:
   Enabled: true
-  Max: 15
+  Max: 25
 
 Naming/FileName:
   Enabled: false

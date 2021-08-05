@@ -74,10 +74,9 @@ The case-styling above works as there's still a case-insensitive match. But what
 This could be e.g.
 {% glossary cat, display: cats%}
 {% glossary some term, display: some other display%}
-
-TODO mention that a term name can't contain comma
 ```
-Not that a term name can not contain a `,`, as this is the argument separator character.
+
+**Note** that a term name can not contain a `,`, as this is the argument separator character.
 
 
 ## CSS Style Override

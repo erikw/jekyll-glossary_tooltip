@@ -6,8 +6,6 @@
 [![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
 
 <img src="/img/tooltip_screenshot.png" width="256" align="right" alt="Screenshot of the glossary tooltip term definition" title="Example of tooltip definition of the term 'Jekyll'.">
-<br>
-
 
 This plugin simplifies for your readers and you by making it easy to define terms or abbreviations that needs an explanation. Define a common dictionary of terms and their definition in a YAML file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definition on mouse hover.
 

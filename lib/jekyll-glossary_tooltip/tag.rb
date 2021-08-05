@@ -7,18 +7,17 @@ module Jekyll
   module GlossaryTooltip
     # Custom liquid tag implementation.
     class Tag < Liquid::Tag
-      def initialize(tag_name, text, tokens)
+      def initialize(tag_name, args, tokens)
         super
-        @term_query = text.strip
+        @opts = OptionsParser.parse(args)
       end
 
       def render(context)
-        raise Errors::NoTermNameInTag if @term_query.empty?
-
-        entry = lookup_entry(context.registers[:site], @term_query)
+        entry = lookup_entry(context.registers[:site], @opts[:term_query])
+        @opts[:display] ||= @opts[:term_query]
         <<~HTML
           <span class="jekyll-glossary">
-             #{@term_query}
+             #{@opts[:display]}
              <span class="jekyll-glossary-tooltip">#{entry["definition"]}#{render_tooltip_url(entry)}</span>
           </span>
         HTML

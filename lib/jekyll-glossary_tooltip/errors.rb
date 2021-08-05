@@ -13,8 +13,14 @@ module Jekyll
         def initialize(term_name); super("The term '#{term_name}' was defined multiple times in the glossary") end
       end
       class NoGlossaryFile < StandardError; def initialize; super("No data.glossary found") end end
-      class NoTermNameInTag < StandardError
+      class OptionsNoTermNameInTag < StandardError
         def initialize; super("No term name argument for the glossary tag supplied") end
+      end
+      class OptionsBadTagArgumentFormat < StandardError
+        def initialize(term_name); super("The glossary tag for term '#{term_name}' has a bad argument format") end
+      end
+      class OptionsUnknownTagArgument < StandardError
+        def initialize(arg); super("An unknown tag argument #{arg} was encountered") end
       end
     end
   end

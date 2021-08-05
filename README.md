@@ -68,8 +68,16 @@ The term name can contain spaces like {% glossary operating system }.
 
 Even if the term is defined in _data/glossary.yml as 'term_name', the matching is case-insensitive meaning that I can look it up using {% glossary TeRM_NaME %}. Note that the term is displayed as defined in the tag rather than the definition, here meaing 'TeRM_NaME'.
 
-TODO define name self
+The case-styling above works as there's still a case-insensitive match. But what about when you actually want to dispaly the term differently? Maybe the term is defined as "cat" but you want to use the plural "cats"? Then you can supply an optional `display` argument. The syntax is:
+{% glossary <term>, display: <diplay name> %}
+
+This could be e.g.
+{% glossary cat, display: cats%}
+{% glossary some term, display: some other display%}
+
+TODO mention that a term name can't contain comma
 ```
+Not that a term name can not contain a `,`, as this is the argument separator character.
 
 
 ## CSS Style Override
@@ -173,3 +181,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/erikw/
 
 # License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+# Acknowledgement
+Thanks to [ayastreb/jekyll-maps](https://github.com/ayastreb/jekyll-maps) for inspiration on project structure and options parsing!

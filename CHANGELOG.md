@@ -1,3 +1,6 @@
+## [1.1.0] - 2021-08-06
+- Add optional `display:` argument to set a different term display name, rather than using the term name as defined in the glossary file. Usage: `{% glossary term_name, display: Different Name To Display %}`.
+
 ## [1.0.0] - 2021-08-05
 - No changes from `v0.1.0` but just bumping to final first major release version!
 

@@ -73,7 +73,7 @@ The case-styling above works as there's still a case-insensitive match. But what
 
 This could be e.g.
 {% glossary cat, display: cats%}
-{% glossary some term, display: some other display%}
+{% glossary some term, display: some other display text %}
 ```
 
 **Note** that a term name can not contain a `,`, as this is the argument separator character.

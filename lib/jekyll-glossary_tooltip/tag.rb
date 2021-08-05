@@ -13,6 +13,8 @@ module Jekyll
       end
 
       def render(context)
+        raise Errors::NoTermNameInTag if @term_query.empty?
+
         entry = lookup_entry(context.registers[:site], @term_query)
         <<~HTML
           <span class="jekyll-glossary">

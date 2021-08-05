@@ -13,6 +13,9 @@ module Jekyll
         def initialize(term_name); super("The term '#{term_name}' was defined multiple times in the glossary") end
       end
       class NoGlossaryFile < StandardError; def initialize; super("No data.glossary found") end end
+      class NoTermNameInTag < StandardError
+        def initialize; super("No term name argument for the glossary tag supplied") end
+      end
     end
   end
 end

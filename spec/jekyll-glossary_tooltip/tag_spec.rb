@@ -77,4 +77,12 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
       expect { site.process }.to raise_error(E::MultipleTermEntries)
     end
   end
+
+  context "when a site is incorrectly configured (missing term arg in the tag)" do
+    let(:site) { make_site({ "source" => source_dir("missing_tag_arg") }) }
+
+    it "building the site will raise an error" do
+      expect { site.process }.to raise_error(E::NoTermNameInTag)
+    end
+  end
 end

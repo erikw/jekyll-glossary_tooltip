@@ -1,0 +1,10 @@
+- term: term_with_url
+  definition: term_with_url definition
+  url: term_with_url url
+- term: term_without_url
+  definition: term_without_url definition
+- term: TERM_CASE_INSENSITIVE
+  definition: TERM_CASE_INSENSITIVE definition
+  url: TERM_CASE_INSENSITIVE url
+- term: term with spaces
+  definition: term with spaces definition

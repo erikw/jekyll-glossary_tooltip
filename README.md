@@ -1,11 +1,9 @@
-# Jekyll Glossary Tooltip Tag Plugin
+# Jekyll Glossary Tooltip Tag Plugin UNRELEASED
 [![Gem Version](https://badge.fury.io/rb/jekyll-glossary_tooltip.svg)](https://badge.fury.io/rb/jekyll-glossary_tooltip)
 [![Gem Downloads](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-glossary_tooltip?color=brightgreen&type=total&label=gem%20downloads)](https://rubygems.org/gems/jekyll-glossary_tooltip)
 [![Travis Build Status](https://img.shields.io/travis/erikw/jekyll-glossary_tooltip/main?logo=travis)](https://travis-ci.com/erikw/jekyll-glossary_tooltip)
 [![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/59050f3f66ed1f1ee32e/maintainability)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/maintainability)
 [![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/59050f3f66ed1f1ee32e/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
-
-TODO make all badges work
 
 <img src="/img/tooltip_screenshot.png" width="256" align="right" alt="Screenshot of the glossary tooltip term definition" title="Example of tooltip definition of the term 'Jekyll'.">
 

@@ -5,6 +5,7 @@ version: "2"
 plugins:
   rubocop:
     enabled: true
+    channel: rubocop-1-18-3
   fixme:
     enabled: true
   eslint:

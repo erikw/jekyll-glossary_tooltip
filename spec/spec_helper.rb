@@ -13,7 +13,6 @@ SOURCE_DIR = File.expand_path("fixtures", __dir__)
 # Base directory for generated files from tests.
 DEST_DIR   = File.expand_path("dest", __dir__)
 
-
 # Tag matching regex parts.
 R1 = %r{<span class="jekyll-glossary">\s*}
 R2 = %r{\s*<span class="jekyll-glossary-tooltip">\s*}
@@ -36,7 +35,9 @@ RSpec.configure do |config|
 
   # Get absolute path to a file within a fixture in the source dir.
   def source_dir(fixture, *filesegments)
-    File.join(SOURCE_DIR, fixture, *filesegments) end
+    File.join(SOURCE_DIR, fixture, *filesegments)
+  end
+
   # Get absolute path to file within destination output dir.
   def dest_dir(*filesegments)
     File.join(DEST_DIR, *filesegments)
@@ -63,13 +64,11 @@ RSpec.configure do |config|
 
   # Expect HTML tag components to match given content.
   def expect_tag_match(content, term_name, url: true, term_display: nil)
-    term_display = term_display ? term_display : term_name
+    term_display ||= term_name
 
-	regex = %r/#{R1}#{term_display}#{R2}#{term_name} definition/
-	if url
-	  regex = Regexp.new(regex.source + %r/#{R3}#{term_name} url#{R4}/.source)
-  	end
-	regex = Regexp.new(regex.source + %r/#{R5}/.source)
+    regex = %r{#{R1}#{term_display}#{R2}#{term_name} definition}
+    regex = Regexp.new(regex.source + %r{#{R3}#{term_name} url#{R4}}.source) if url
+    regex = Regexp.new(regex.source + %r{#{R5}}.source)
 
     expect(content).to match(regex)
   end

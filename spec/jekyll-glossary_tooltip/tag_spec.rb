@@ -5,36 +5,36 @@ require "fileutils"
 require "jekyll-glossary_tooltip/tag"
 require "jekyll-glossary_tooltip/errors"
 
-include Jekyll::GlossaryTooltip  # Import namespace so we can access Errors:: easily.
+E = Jekyll::GlossaryTooltip::Errors  # Make namespace referencing easier here.
 
 RSpec.describe Jekyll::GlossaryTooltip::Tag do
   after(:context) { remove_dest_dir }
 
   context "when a site is correctly configured" do
-    before(:context) {
-  	  site = make_site({ "source" => source_dir("normal") })
-  	  site.process
-  	}
+    before(:context) do
+      site = make_site({ "source" => source_dir("normal") })
+      site.process
+    end
 
     let(:page1) { File.read(dest_dir("page1.html")) }
-	let(:page2) { File.read(dest_dir("page2.html")) }
-	let(:page3) { File.read(dest_dir("page3.html")) }
+    let(:page2) { File.read(dest_dir("page2.html")) }
+    let(:page3) { File.read(dest_dir("page3.html")) }
     let(:page4) { File.read(dest_dir("page4.html")) }
 
     it "renders a glossary tag with a URL" do
       expect_tag_match(page1, "term_with_url")
     end
 
-	it "renders a glossary tag without a URL" do
-      expect_tag_match(page2, "term_without_url", :url=>false )
-	end
+    it "renders a glossary tag without a URL" do
+      expect_tag_match(page2, "term_without_url", url: false)
+    end
 
     it "renders a glossary tag from case insensitive lookup" do
-      expect_tag_match(page3,"TERM_CASE_INSENSITIVE", :term_display=>"TerM_Case_Insensitive")
+      expect_tag_match(page3, "TERM_CASE_INSENSITIVE", term_display: "TerM_Case_Insensitive")
     end
 
     it "renders a glossary tag having spaces" do
-      expect_tag_match(page4, "term with spaces", :url=>false)
+      expect_tag_match(page4, "term with spaces", url: false)
     end
   end
 
@@ -42,7 +42,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_definition") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Errors::MissingTermDefinition)
+      expect { site.process }.to raise_error(E::MissingTermDefinition)
     end
   end
 
@@ -50,7 +50,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("empty_definition") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Errors::MissingTermDefinition)
+      expect { site.process }.to raise_error(E::MissingTermDefinition)
     end
   end
 
@@ -58,7 +58,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_glossary") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Errors::NoGlossaryFile)
+      expect { site.process }.to raise_error(E::NoGlossaryFile)
     end
   end
 
@@ -66,7 +66,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("missing_term") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Errors::MissingTermEntry)
+      expect { site.process }.to raise_error(E::MissingTermEntry)
     end
   end
 
@@ -74,7 +74,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:site) { make_site({ "source" => source_dir("duplicate_term") }) }
 
     it "building the site will raise an error" do
-	  expect { site.process }.to raise_error(Errors::MultipleTermEntries)
+      expect { site.process }.to raise_error(E::MultipleTermEntries)
     end
   end
 end

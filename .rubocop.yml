@@ -33,6 +33,10 @@ Lint/EmptyBlock:
   Enabled: true
 Lint/EmptyClass:
   Enabled: true
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+  Exclude:
+  - lib/jekyll-glossary_tooltip/errors.rb
 Lint/EmptyInPattern:
   Enabled: true
 Lint/LambdaWithoutLiteralBlock:
@@ -67,6 +71,9 @@ Lint/UselessAccessModifier:
 Metrics/BlockLength:
   Enabled: true
   Max: 100
+Metrics/MethodLength:
+  Enabled: true
+  Max: 15
 
 Naming/FileName:
   Enabled: false
@@ -79,6 +86,10 @@ Style/ArgumentsForwarding:
   Enabled: true
 Style/CollectionCompact:
   Enabled: true
+Style/Documentation:
+  Enabled: true
+  Exclude:
+  - lib/jekyll-glossary_tooltip/errors.rb
 Style/DocumentDynamicEvalDefinition:
   Enabled: true
 Style/EndlessMethod:
@@ -101,6 +112,12 @@ Style/QuotedSymbols:
   Enabled: true
 Style/RedundantArgument:
   Enabled: true
+Style/RegexpLiteral:
+  Enabled: false
+Style/SingleLineMethods:
+  Enabled: true
+  Exclude:
+  - lib/jekyll-glossary_tooltip/errors.rb
 Style/StringChars:
   Enabled: true
 Style/StringLiterals:

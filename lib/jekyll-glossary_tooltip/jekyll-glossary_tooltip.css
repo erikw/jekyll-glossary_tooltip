@@ -48,3 +48,12 @@
   border-style: solid;
   border-color: black transparent transparent transparent;
 }
+
+/* Animation from invisible to visible on hover. */
+.jekyll-glossary .jekyll-glossary-tooltip {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.jekyll-glossary:hover .jekyll-glossary-tooltip {
+  opacity: 1;
+}

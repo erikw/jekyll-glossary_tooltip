@@ -72,7 +72,7 @@ The case-styling above works as there's still a case-insensitive match. But what
 {% glossary <term>, display: <diplay name> %}
 
 This could be e.g.
-{% glossary cat, display: cats%}
+{% glossary cat, display: cats %}
 {% glossary some term, display: some other display text %}
 ```
 

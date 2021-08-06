@@ -62,9 +62,9 @@ This could look something like:
 On any page where you've made sure include the needed CSS styling, you can use the glossary tag simply like
 
 ```markdown
-Here I'm taling about {% glossary term_name %} in a blog post.
+Here I'm talking about {% glossary term_name %} in a blog post.
 
-The term name can contain spaces like {% glossary operating system }.
+The term name can contain spaces like {% glossary operating system %}.
 
 Even if the term is defined in _data/glossary.yml as 'term_name', the matching is case-insensitive meaning that I can look it up using {% glossary TeRM_NaME %}. Note that the term is displayed as defined in the tag rather than the definition, here meaing 'TeRM_NaME'.
 

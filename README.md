@@ -183,3 +183,6 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 # Acknowledgement
 Thanks to [ayastreb/jekyll-maps](https://github.com/ayastreb/jekyll-maps) for inspiration on project structure and options parsing!
+
+# More Jekyll
+Check out my other Jekyll repositories [here](https://github.com/erikw?tab=repositories&q=jekyll-&type=&language=&sort=).

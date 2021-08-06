@@ -1,6 +1,7 @@
 ## [1.2.0] - 2021-08-06
 - Add bottom arrow to the tooltip.
 - Restyle the glossary term bottom border style and color.
+- Add tooltip hover animation from invisible to visible.
 
 ## [1.1.0] - 2021-08-06
 - Add optional `display:` argument to set a different term display name, rather than using the term name as defined in the glossary file. Usage: `{% glossary term_name, display: Different Name To Display %}`.

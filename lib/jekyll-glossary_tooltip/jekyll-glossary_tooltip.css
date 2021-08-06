@@ -2,7 +2,7 @@
 .jekyll-glossary {
   position: relative;
   display: inline-block;
-  border-bottom: 3px dotted blue;
+  border-bottom: 2px dotted #0074bd;
   cursor: help;
 }
 

@@ -23,7 +23,11 @@ module Jekyll
 
           options[:term_query] = opt_segments[0]
           opt_segments.shift
+          parse_segments(options, opt_segments)
+          options
+        end
 
+        def parse_segments(options, opt_segments)
           opt_segments.each do |opt_segment|
             raise Errors::OptionsBadTagArgumentFormat, options[:term_name] unless opt_segment =~ ARGS_PATTERN
 
@@ -33,7 +37,6 @@ module Jekyll
 
             options[arg_name.to_sym] = arg_value
           end
-          options
         end
       end
     end

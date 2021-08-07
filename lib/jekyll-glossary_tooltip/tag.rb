@@ -30,7 +30,8 @@ module Jekyll
       def render_tooltip_url(entry)
         # The content of the anchor is set from the CSS class jekyll-glossary-source-link,
         # so that the plugin user can customize the text without touching ruby source.
-        entry["url"] ? "<br><a class=\"jekyll-glossary-source-link\" href=\"#{entry["url"]}\"></a>" : ""
+        anchor = "<br><a class=\"jekyll-glossary-source-link\" href=\"#{entry["url"]}\" target=\"_blank\"></a>"
+        entry["url"] ? anchor : ""
       end
 
       def lookup_entry(site, term_name)

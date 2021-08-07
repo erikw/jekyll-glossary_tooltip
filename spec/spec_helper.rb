@@ -17,7 +17,7 @@ DEST_DIR   = File.expand_path("dest", __dir__)
 R1 = %r{<span class="jekyll-glossary">\s*}
 R2 = %r{\s*<span class="jekyll-glossary-tooltip">\s*}
 R3 = %r{\s*<br(\s/)?><a class="jekyll-glossary-source-link" href="}
-R4 = %r{"></a>\s*}
+R4 = %r{" target="_blank"></a>\s*}
 R5 = %r{</span>\s*</span>}
 
 # Reference for RSpec config: https://www.rubydoc.info/github/rspec/rspec-core/RSpec/Core/Configuration

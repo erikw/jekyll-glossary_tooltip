@@ -1,3 +1,6 @@
+## [1.3.0] - 2021-08-07
+- Open the souce link from a tooltip in a new tab.
+
 ## [1.2.0] - 2021-08-06
 - Add bottom arrow to the tooltip.
 - Restyle the glossary term bottom border style and color.

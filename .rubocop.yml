@@ -5,6 +5,10 @@ require:
   - rubocop-rake
   - rubocop-rspec
 
+inherit_mode:
+  merge:
+    - Exclude  # Merge my AllCops.Excllude with default exludes from https://github.com/rubocop/rubocop/blob/master/config/default.yml
+
 AllCops:
   TargetRubyVersion: 3.0
   Include:

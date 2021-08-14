@@ -16,6 +16,7 @@ group :development, :test do
   gem "travis", "~> 1.0", require: false
   gem "appraisal", "~> 2.4", require: false
   gem "gem-release", "~> 2.0", require: false
+  gem "solargraph", require: false
 end
 
 group :test do

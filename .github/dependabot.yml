@@ -1,5 +1,6 @@
 # Reference: https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 # Validation: https://dependabot.com/docs/config-file/validator/
+
 version: 2
 updates:
   - package-ecosystem: "bundler"

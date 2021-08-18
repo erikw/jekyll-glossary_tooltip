@@ -1,3 +1,6 @@
+## [1.3.1] - 2021-08-18
+- Fix gemspec dependency range stynax.
+
 ## [1.3.0] - 2021-08-07
 - Open the souce link from a tooltip in a new tab.
 

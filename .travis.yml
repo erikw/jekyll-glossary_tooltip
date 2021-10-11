@@ -11,6 +11,7 @@ env:
   global:
     - CC_TEST_REPORTER_ID=8b8822cdaba8bb6c0a9d3f05bea9bc94dbf866ccdd1204913f5673b61caa61b1
 language: ruby
+dist: focal
 # Buid matrix (rvm x gemfile = 2x2) with one version from each supported major version in range defined in .gemspec for
 rvm:
   - 2.7.0

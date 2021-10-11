@@ -35,7 +35,7 @@ It's also possible to provide an optional URL to for example a term definition s
 
 # Usage
 ## Glossary Term Definition File
-Create a file `_data/glossary.yml` to host your shared term definition entries. This file should contain a list of term entries like
+Create a file `_data/glossary.yml` to host your shared term definition entries. This file should contain a list of term entries in the format of:
 
 ```markdown
 - term: a_term_name           # Can contain spaces

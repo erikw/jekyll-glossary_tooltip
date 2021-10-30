@@ -1,8 +1,7 @@
 # Site settings
 title:  jekyll-glossary_tooltip Live Demo
-email: jekyll@tester.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Demo of the https://github.com/erikw/jekyll-glossary_tooltip Jekyll plugin
+  Demo of the erikw/jekyll-glossary_tooltip Jekyll plugin
 baseurl: ""
 url: "https://erikw.github.io/jekyll-glossary_tooltip"
 github_username:  erikw
@@ -11,6 +10,9 @@ github_username:  erikw
 markdown: kramdown
 theme: minima
 #remote_theme: heiswayi/thinkspace
+
+
+header_pages: [null] # Remove about.md menu time
 
 exclude:
   - bin/

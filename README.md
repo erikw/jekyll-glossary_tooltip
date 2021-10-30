@@ -1,9 +1,12 @@
-# jekyll-4.x.x-test
-Basic Jekyll 4.x.x test site deployed at https://erikw.github.io/jekyll-4.x.x-test/
+# jekyll-4.x.x-test Live Demo
+Deployed at https://erikw.github.io/jekyll-glossary_tooltip/
 
-## Setup
+# Deployment
 ```console
-$ git submodule init
 $ bundle install
-$ bundle exec rake
+$ bundle exec jekyll serve --open-url
+$ bundle exec rake deploy
 ```
+
+# Notes
+* Need to override template _includes/head.html to change the CSS include to be relative, as it's deployed not on the top level. Reference: https://stackoverflow.com/a/62683398/265508

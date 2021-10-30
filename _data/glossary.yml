@@ -1,3 +1,8 @@
 - term: plugin
-  definition: And extension for a system
-  url: https://en.wikipedia.org/wiki/Plug-in_(computing)
+  definition: A functional extension of a system.
+- term: URL
+  definition: Uniform Resource Locator
+  url: https://en.wikipedia.org/wiki/URL
+- term: SSG
+  definition: A Static Site Generator compiles the website before deployment. Then the generated web content is simply retrieved as-is by the client without any code running at retrieve time. This tech has gained popularity in the recent years.
+  url: https://jamstack.org/generators/

@@ -2,6 +2,8 @@
 Deployed at https://erikw.github.io/jekyll-glossary_tooltip/
 
 # Deployment
+With [rake-jekyll](https://github.com/jirutka/rake-jekyll), this branch `gh-pages-source` is built and deployed to branch `gh-pages`, for which the project is configured with GitHub Pages on.
+
 ```console
 $ bundle install
 $ bundle exec jekyll serve --open-url

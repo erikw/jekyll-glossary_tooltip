@@ -5,7 +5,7 @@ layout: page
 # What?
 This is a live demo of [erikw/jekyll-glossary_tooltip](https://github.com/erikw/jekyll-glossary_tooltip).
 
-# Example
+# Examples
 Check out the [source code](https://raw.githubusercontent.com/erikw/jekyll-glossary_tooltip/gh-pages-source/index.md) of this page, for what syntax was used to produce the below output:
 
 * Testing a simple glossary tag {% glossary plugin %} here.

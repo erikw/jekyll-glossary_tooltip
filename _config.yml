@@ -1,6 +1,6 @@
 # Site settings
 title:  jekyll-glossary_tooltip Live Demo
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Demo of the erikw/jekyll-glossary_tooltip Jekyll plugin
 baseurl: ""
 url: "https://erikw.github.io/jekyll-glossary_tooltip"

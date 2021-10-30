@@ -1,4 +1,4 @@
-# jekyll-4.x.x-test Live Demo
+# Live Demo
 Deployed at https://erikw.github.io/jekyll-glossary_tooltip/
 
 # Deployment

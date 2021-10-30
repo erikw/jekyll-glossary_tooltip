@@ -1,0 +1,28 @@
+# Site settings
+title: Jekyll 4.x.x. Test Site
+email: jekyll@tester.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Plain Jekyll installation to test plugin versions
+baseurl: ""
+url: "https://erikw.github.io/jekyll-4.x.x-test/"
+github_username:  erikw
+
+# Build settings
+markdown: kramdown
+theme: minima
+#remote_theme: heiswayi/thinkspace
+
+exclude:
+  - bin/
+  - Rakefile
+  - Gemfile*
+  - README.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-google_search_console_verification_file
+  - jekyll-glossary_tooltip
+# - jekyll-remote-theme
+
+google_search_console:
+  verification_file_code: 1234

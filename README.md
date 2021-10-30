@@ -5,6 +5,8 @@
 [![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/maintainability)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/maintainability)
 [![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
 
+:point_right: **Live demo**: https://erikw.github.io/jekyll-glossary_tooltip/
+
 <img src="/img/tooltip_screenshot.png" width="256" align="right" alt="Screenshot of the glossary tooltip term definition" title="Example of tooltip definition of the term 'Jekyll'.">
 
 This plugin simplifies for your readers and you by making it easy to define terms or abbreviations that needs an explanation. Define a common dictionary of terms and their definition in a YAML file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definition on mouse hover.
@@ -174,6 +176,9 @@ To use the [travis cli client](https://github.com/travis-ci/travis.rb) (installe
    $ bundle exec travis branches
    $ bundle exec travis monitor
    ```
+
+## Live Demo GitHub Pages
+The live demo source is in the branch [`gh-pages-source`](https://github.com/erikw/jekyll-glossary_tooltip/tree/gh-pages-source). Check its `README.md`!
 
 # Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/erikw/jekyll-glossary_tooltip.

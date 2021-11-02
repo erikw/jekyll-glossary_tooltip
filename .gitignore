@@ -19,3 +19,6 @@ coverage/
 .rspec_status
 spec/dest/
 spec/reports/
+
+# Jekyll - when switching from gh-pages-source branch
+_site/

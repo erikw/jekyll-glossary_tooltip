@@ -4,6 +4,7 @@
 [![Travis Build Status](https://img.shields.io/travis/erikw/jekyll-glossary_tooltip/main?logo=travis)](https://app.travis-ci.com/github/erikw/jekyll-glossary_tooltip)
 [![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/maintainability)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/maintainability)
 [![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
+[![SLOC](https://img.shields.io/tokei/lines/github/erikw/jekyll-glossary_tooltip)](#)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE.txt)
 
 

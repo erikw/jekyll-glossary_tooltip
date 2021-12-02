@@ -8,7 +8,7 @@ gemfiles/Gemfile*.lock
 # Bundle local config
 .bundle/
 
-# Package gem from ($rake install)
+# Package gem from $(rake install)
 pkg/
 
 # simplecov

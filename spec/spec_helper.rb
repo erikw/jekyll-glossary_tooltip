@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require "simplecov" # Must be before any application code.
-# Must be set for codeclimat reporter
-SimpleCov.command_name "test:bdd"
+require "simplecov" # Must be before any application code. See conf at .simplecov
 
 require "jekyll"
 

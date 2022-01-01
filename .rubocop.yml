@@ -21,8 +21,16 @@ AllCops:
 
 Gemspec/DateAssignment:
   Enabled: true
+Gemspec/RequireMFA:
+  Enabled: true
 
 Layout/LineEndStringConcatenationIndentation:
+  Enabled: true
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+  Exclude:
+  - lib/jekyll-glossary_tooltip/errors.rb
+Layout/SpaceBeforeBrackets:
   Enabled: true
 
 Lint/AmbiguousAssignment:
@@ -37,10 +45,16 @@ Lint/EmptyBlock:
   Enabled: true
 Lint/EmptyClass:
   Enabled: true
-Layout/EmptyLineBetweenDefs:
+Lint/AmbiguousOperatorPrecedence:
   Enabled: true
-  Exclude:
-  - lib/jekyll-glossary_tooltip/errors.rb
+Lint/AmbiguousRange:
+  Enabled: true
+Lint/IncompatibleIoSelectWithFiberScheduler:
+  Enabled: true
+Lint/RequireRelativeSelfPath:
+  Enabled: true
+Lint/UselessRuby2Keywords:
+  Enabled: true
 Lint/EmptyInPattern:
   Enabled: true
 Lint/LambdaWithoutLiteralBlock:
@@ -54,8 +68,6 @@ Lint/NumberedParameterAssignment:
 Lint/OrAssignmentToConstant:
   Enabled: true
 Lint/RedundantDirGlobSort:
-  Enabled: true
-Layout/SpaceBeforeBrackets:
   Enabled: true
 Lint/SymbolConversion:
   Enabled: true
@@ -86,6 +98,11 @@ Naming/FileName:
   Exclude:
   - lib/jekyll-glossary_tooltip.rb
 Naming/InclusiveLanguage:
+  Enabled: true
+Naming/BlockForwarding:
+  Enabled: true
+
+Security/IoMethods:
   Enabled: true
 
 Style/ArgumentsForwarding:
@@ -134,6 +151,22 @@ Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
 Style/SwapValues:
   Enabled: true
+Style/FileRead:
+  Enabled: true
+Style/FileWrite:
+  Enabled: true
+Style/MapToHash:
+  Enabled: true
+Style/NumberedParameters:
+  Enabled: true
+Style/NumberedParametersLimit:
+  Enabled: true
+Style/OpenStructUse:
+  Enabled: true
+Style/RedundantSelfAssignmentBranch:
+  Enabled: true
+Style/SelectByRegexp:
+  Enabled: true
 
 
 # Reference: https://github.com/rubocop/rubocop-rake/blob/master/config/default.yml
@@ -154,3 +187,9 @@ RSpec/Rails/AvoidSetupHook:
   Enabled: false
 RSpec/BeforeAfterAll:
   Enabled: false
+RSpec/ExcessiveDocstringSpacing:
+  Enabled: true
+RSpec/SubjectDeclaration:
+  Enabled: true
+RSpec/FactoryBot/SyntaxMethods:
+  Enabled: true

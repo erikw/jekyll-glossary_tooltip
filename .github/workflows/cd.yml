@@ -1,0 +1,30 @@
+name: Continuous Deployment   # Well, semi-continuous
+
+on:
+  push:
+    tags: v[0-9]+.[0-9]+.[0-9]+
+env:
+  RUBY_VER: 3.0.1
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ env.RUBY_VER }}
+        bundler-cache: true
+    - name: Run CI Build with Rake
+      run: bundle exec rake
+  release-github:
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and publish gem to GitHub Packages
+        if: contains(github.ref, 'refs/tags/v')
+        uses: jstastny/publish-gem-to-github@master
+        with:
+          token: ${{ github.token }}
+          owner: ${{ github.repository_owner }}

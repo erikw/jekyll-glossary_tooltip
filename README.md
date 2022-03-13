@@ -20,13 +20,14 @@ It's also possible to provide an optional URL to for example a term definition s
 
 
 # Installation
-1. Add this gem to your Jekyll site's Gemfile
-   - Simply with `$ bundle add jekyll-glossary_tooltip` when standing in the Jekyll project
-   - Or manually by adding to `Gemfile`
+1. Add this gem to your Jekyll site's Gemfile in the `:jekyll_plugins` group:
    ```ruby
-     gem 'jekyll-glossary_tooltip'
+     group :jekyll_plugins do
+       [...]
+       gem 'jekyll-glossary_tooltip'
+     end
    ```
-   and then running `$ bundle install`.
+   and then run `$ bundle install`.
 1. In your site's `_config.yml`, enable the plugin:
    ```yml
    plugins:

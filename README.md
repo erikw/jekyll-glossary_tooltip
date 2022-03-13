@@ -23,7 +23,7 @@ It's also possible to provide an optional URL to for example a term definition s
 1. Add this gem to your Jekyll site's Gemfile in the `:jekyll_plugins` group:
    * On CLI (in project root directory):
    ```console
-   $ bundle add --group jekyll_plugins jekyll-glossary_tooltip`
+   $ bundle add --group jekyll_plugins jekyll-glossary_tooltip
    ```
    * Or manually:
    ```ruby

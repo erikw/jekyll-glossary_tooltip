@@ -2,6 +2,6 @@
 
 RSpec.describe Jekyll::GlossaryTooltip do
   it "has a version number" do
-    expect(Jekyll::GlossaryTooltip::VERSION).not_to be nil
+    expect(Jekyll::GlossaryTooltip::VERSION).not_to be_nil
   end
 end

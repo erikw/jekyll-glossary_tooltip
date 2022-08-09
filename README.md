@@ -22,8 +22,8 @@ It's also possible to provide an optional URL to for example a term definition s
 # Installation
 1. Add this gem to your Jekyll site's Gemfile in the `:jekyll_plugins` group:
    * On CLI (in project root directory):
-   ```console
-   $ bundle add --group jekyll_plugins jekyll-glossary_tooltip
+   ```shell
+   bundle add --group jekyll_plugins jekyll-glossary_tooltip
    ```
    * Or manually:
    ```ruby
@@ -42,8 +42,8 @@ It's also possible to provide an optional URL to for example a term definition s
 1. Use the liquid tag in a page like `{% glossary term_name %}`
 1. Add CSS styling for the tooltip from [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css). You need to make sure that the pages where you will use the glossary tag have this styling applied. Typically this would mean 1) copying this file to your `assets/css/` directory 2) editing your theme's template for blog posts (or what pages you desire) to include this CSS in the header like `<link rel="stylesheet" href="/assets/css/jekyll-glossary_tooltip.css">`. However you could also copy this file's content in to your `main.css` or `main.scss` or however you build your site's CSS.
 1. Now just build your site and you will get nice nice term definition tooltips on mouse hover (or mobile, tap) for you terms!
-   ```console
-   $ bundle exec jekyll build
+   ```shell
+   bundle exec jekyll build
    ```
 
 # Usage
@@ -128,22 +128,22 @@ Instructions for releasing on rubygems.org below. Optionally make a GitHub [rele
 
 ## Using bundler/gem_tasks rake tasks
 Following instructions from [bundler.io](https://bundler.io/guides/creating_gem.html#releasing-the-gem):
-```console
-$ vi -p lib/jekyll-glossary_tooltip/version.rb CHANGELOG.md
-$ bundle exec rake build
-$ ver=$(ruby -r ./lib/jekyll-glossary_tooltip/version.rb -e 'puts Jekyll::GlossaryTooltip::VERSION')
+```shell
+vi -p lib/jekyll-glossary_tooltip/version.rb CHANGELOG.md
+bundle exec rake build
+ver=$(ruby -r ./lib/jekyll-glossary_tooltip/version.rb -e 'puts Jekyll::GlossaryTooltip::VERSION')
 
 # Optional: test locally by including in another project
-$ gem install pkg/jekyll-glossary_tooltip-$ver.gem
+gem install pkg/jekyll-glossary_tooltip-$ver.gem
 
-$ bundle exec rake release
+bundle exec rake release
 ```
 
 ## Using gem-release gem extension
 Using [gem-release](https://github.com/svenfuchs/gem-release):
-```console
-$ vi CHANGELOG.md && git add CHANGELOG.md && git commit -m "Update CHANGELOG.md" && git push
-$ gem bump --version minor --tag --push --release --sign
+```shell
+vi CHANGELOG.md && git add CHANGELOG.md && git commit -m "Update CHANGELOG.md" && git push
+gem bump --version minor --tag --push --release --sign
 ```
 For `--version`, use `major|minor|patch` as needed.
 
@@ -151,18 +151,18 @@ For `--version`, use `major|minor|patch` as needed.
 * For ruby, just use RVM to switch between supported ruby version specified in `.gemspec`.
 * To run with different jekyll versions, [Appraisal](https://github.com/thoughtbot/appraisal) is used with [`Appraisals`](Appraisals) to generate different [`gemfiles/`](gemfiles/)
    - To use a specific Gemfile, run like
-      ```console
-      $ BUNDLE_GEMFILE=gemfiles/jekyll_4.x.x.gemfile bundle exec rake spec
-      $ bundle exec appraisal jekyll-4.x.x rake spec
+      ```shell
+      BUNDLE_GEMFILE=gemfiles/jekyll_4.x.x.gemfile bundle exec rake spec
+      bundle exec appraisal jekyll-4.x.x rake spec
       ```
    - To run `rake spec` for all gemfiles:
-      ```console
-      $ bundle exec appraisal rake spec
+      ```shell
+      bundle exec appraisal rake spec
       ```
    - To generate new/updated gemfiles from `Appraisals`
-      ```console
-      $ bundle exec appraisal install
-      $ bundle exec appraisal generate --travis
+      ```shell
+      bundle exec appraisal install
+      bundle exec appraisal generate --travis
       ```
 
 ## Travis
@@ -172,20 +172,20 @@ To use the [travis cli client](https://github.com/travis-ci/travis.rb) (installe
    - create a new token named `travis-cli`
    - Set the scopes `repo`, `read:org`, `user:email` according to the [docs](https://docs.travis-ci.com/user/github-oauth-scopes).
 1. Set travis.com as the default so we don't need to add `--pro` to most commands
-   ```console
-   $ bundle exec travis endpoint --set-default --api-endpoint https://api.travis-ci.com/
+   ```shell
+   bundle exec travis endpoint --set-default --api-endpoint https://api.travis-ci.com/
    ```
 1. Login with the cli client
-   ```console
-   $ bundle exec travis login --github-token $GITHUB_TOKEN
+   ```shell
+   bundle exec travis login --github-token $GITHUB_TOKEN
    ```
 1. Now the cli client can be used (might need `--pro` to use travis.com)
-   ```console
-   $ bundle exec travis lint
-   $ bundle exec travis accounts
-   $ bundle exec travis status
-   $ bundle exec travis branches
-   $ bundle exec travis monitor
+   ```shell
+   bundle exec travis lint
+   bundle exec travis accounts
+   bundle exec travis status
+   bundle exec travis branches
+   bundle exec travis monitor
    ```
 
 ## Live Demo GitHub Pages

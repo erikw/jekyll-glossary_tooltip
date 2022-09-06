@@ -68,7 +68,13 @@ This could look something like:
 - term: Jamstack
   definition: JavaScript + API + Markup - a way of buildin and hosting websites.
   url: https://jamstack.org/
+- term: LocalDef
+  definition: This definition has an URL with embedded liquid tags to make it dynamic at build time. Note special YAML syntax for being able to use liquid (1.)
+  url: >
+    {{ site.baseurl }}{% link page2.md %}
 ```
+
+1. See [here](https://documentation.platformos.com/use-cases/using-liquid-markup-yaml) for notes on using Liquid in YAML.
 
 
 ## Tag Usage

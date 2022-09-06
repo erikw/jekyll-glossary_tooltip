@@ -21,6 +21,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:page3) { File.read(dest_dir("page3.html")) }
     let(:page4) { File.read(dest_dir("page4.html")) }
     let(:page5) { File.read(dest_dir("page5.html")) }
+    let(:page6) { File.read(dest_dir("page6.html")) }
 
     it "renders a glossary tag with a URL" do
       expect_tag_match(page1, "term_with_url")
@@ -40,6 +41,10 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
 
     it "renders a glossary tag with alternative display name" do
       expect_tag_match(page5, "term_with_url", term_display: "term alt display name")
+    end
+
+    it "renders a glossary tag with URL rendered from embedded liquid tags" do
+      expect_tag_match(page6, "term_with_url_embedded_liquid", href: "/page2.html")
     end
   end
 

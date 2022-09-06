@@ -194,3 +194,6 @@ RSpec/SubjectDeclaration:
   Enabled: true
 RSpec/FactoryBot/SyntaxMethods:
   Enabled: true
+RSpec/MultipleMemoizedHelpers:
+  Enabled: true
+  Max: 10

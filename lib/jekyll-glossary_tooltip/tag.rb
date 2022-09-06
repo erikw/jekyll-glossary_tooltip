@@ -18,7 +18,7 @@ module Jekyll
         <<~HTML
           <span class="jekyll-glossary">
              #{@opts[:display]}
-             <span class="jekyll-glossary-tooltip">#{entry["definition"]}#{render_tooltip_url(entry)}</span>
+             <span class="jekyll-glossary-tooltip">#{entry["definition"]}#{render_tooltip_url(entry, context)}</span>
           </span>
         HTML
       end
@@ -27,11 +27,13 @@ module Jekyll
 
       LOG_TAG = "Glossary Tag:"
 
-      def render_tooltip_url(entry)
+      def render_tooltip_url(entry, context)
         # The content of the anchor is set from the CSS class jekyll-glossary-source-link,
         # so that the plugin user can customize the text without touching ruby source.
-        anchor = "<br><a class=\"jekyll-glossary-source-link\" href=\"#{entry["url"]}\" target=\"_blank\"></a>"
-        entry["url"] ? anchor : ""
+        return "" if entry["url"].nil?
+
+        url = Liquid::Template.parse(entry["url"]).render(context).strip
+        "<br><a class=\"jekyll-glossary-source-link\" href=\"#{url}\" target=\"_blank\"></a>"
       end
 
       def lookup_entry(site, term_name)

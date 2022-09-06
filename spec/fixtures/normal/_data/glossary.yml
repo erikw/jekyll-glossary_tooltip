@@ -8,3 +8,7 @@
   url: TERM_CASE_INSENSITIVE url
 - term: term with spaces
   definition: term with spaces definition
+- term: term_with_url_embedded_liquid
+  definition: term_with_url_embedded_liquid definition
+  url: >
+    {% link page2.md %}

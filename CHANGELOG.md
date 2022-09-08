@@ -6,9 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.4.0] - 2021-08-18
+## [1.5.0] - 2022-09-08
 ### Added
 - Support for embedded liqid tags in the url field. ([#3](https://github.com/erikw/jekyll-glossary_tooltip/issues/3])
+
+## [1.4.0] - 2021-08-18
+### Changed
+* Bump local ruby to 3.1.0
 
 ## [1.3.1] - 2021-08-18
 ### Added

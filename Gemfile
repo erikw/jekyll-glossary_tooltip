@@ -23,6 +23,6 @@ group :test do
   gem "rspec", "~> 3.0"
   gem "rubocop", "~> 1.18", require: false
   gem "rubocop-rake", "~> 0.6", require: false
-  gem "rubocop-rspec", "~> 2.4", require: false
+  gem "rubocop-rspec", "~> 3.0", require: false
   gem "simplecov", "~> 0.21"
 end

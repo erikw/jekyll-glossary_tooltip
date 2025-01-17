@@ -5,7 +5,7 @@
 [![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/maintainability)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/maintainability)
 [![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
 [![CodeQL](https://github.com/erikw/jekyll-glossary_tooltip/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/erikw/jekyll-glossary_tooltip/actions/workflows/codeql-analysis.yml)
-[![SLOC](https://img.shields.io/tokei/lines/github/erikw/jekyll-glossary_tooltip?logo=codefactor&logoColor=lightgrey)](#)
+[![SLOC](https://sloc.xyz/github/erikw/jekyll-glossary_tooltip)](#)
 [![Number of programming languages used](https://img.shields.io/github/languages/count/erikw/jekyll-glossary_tooltip)](#)
 [![Top programming languages used](https://img.shields.io/github/languages/top/erikw/jekyll-glossary_tooltip)](#)
 [![License](https://img.shields.io/github/license/erikw/jekyll-glossary_tooltip)](LICENSE.txt)

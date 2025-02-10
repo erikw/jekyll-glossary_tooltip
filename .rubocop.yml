@@ -184,7 +184,7 @@ RSpec/FilePath:
   Enabled: false
 RSpec/IdenticalEqualityAssertion:
   Enabled: true
-RSpec/Rails/AvoidSetupHook:
+RSpecRails/AvoidSetupHook:
   Enabled: false
 RSpec/BeforeAfterAll:
   Enabled: false
@@ -192,8 +192,15 @@ RSpec/ExcessiveDocstringSpacing:
   Enabled: true
 RSpec/SubjectDeclaration:
   Enabled: true
-RSpec/FactoryBot/SyntaxMethods:
-  Enabled: true
 RSpec/MultipleMemoizedHelpers:
   Enabled: true
   Max: 10
+RSpec/SpecFilePathFormat:
+  Enabled: false
+RSpec/SpecFilePathSuffix:
+  Enabled: false
+RSpec/IndexedLet:
+  Enabled: false
+
+FactoryBot/SyntaxMethods:
+  Enabled: true

@@ -179,13 +179,8 @@ Rake:
 # https://github.com/rubocop/rubocop-rspec/blob/master/config/default.yml
 RSpec:
   Enabled: true
-RSpec/FilePath:
- # Disable to match structure of lib/. For jekyll plugin inclusion convention features, not having lib/jekyll/sth.rb but lib/jekyll-sth.rb
-  Enabled: false
 RSpec/IdenticalEqualityAssertion:
   Enabled: true
-RSpecRails/AvoidSetupHook:
-  Enabled: false
 RSpec/BeforeAfterAll:
   Enabled: false
 RSpec/ExcessiveDocstringSpacing:
@@ -196,11 +191,10 @@ RSpec/MultipleMemoizedHelpers:
   Enabled: true
   Max: 10
 RSpec/SpecFilePathFormat:
+ # Disable to match structure of lib/. For jekyll plugin inclusion convention features, not having lib/jekyll/sth.rb but lib/jekyll-sth.rb
   Enabled: false
 RSpec/SpecFilePathSuffix:
+ # Disable to match structure of lib/. For jekyll plugin inclusion convention features, not having lib/jekyll/sth.rb but lib/jekyll-sth.rb
   Enabled: false
 RSpec/IndexedLet:
   Enabled: false
-
-FactoryBot/SyntaxMethods:
-  Enabled: true

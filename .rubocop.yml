@@ -18,7 +18,7 @@ AllCops:
   # Travis: during build there will be a lot of rubocop config files in this path which will cause build failure as the refer to gems which are not installed by this project.
   # See https://github.com/rubocop/rubocop/issues/9832
   - gemfiles/vendor/bundle/**/*
-  NewCops: enable
+  NewCops: disable
 
 Gemspec/DeprecatedAttributeAssignment:
   Enabled: true

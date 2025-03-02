@@ -24,5 +24,6 @@ group :test do
   gem "rubocop", "~> 1.18", require: false
   gem "rubocop-rake", "~> 0.6", require: false
   gem "rubocop-rspec", "~> 2.4", require: false
-  gem "simplecov", "~> 0.21"
+  gem "simplecov", "~> 0.22"
+  gem "json_pure", "~> 2.8", require: false # Solargraph pulls in v2.6.3 which fails build with " uninitialized constant JSON::Fragment"
 end

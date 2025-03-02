@@ -109,9 +109,9 @@ The structure of this plugin was inspired by [https://ayastreb.me/writing-a-jeky
 
 After checking out the repo;
 1. Install [RVM](https://rvm.io/rvm/install) and install a supported ruby version (see .gemspec)
-1. run `script/setup` to install dependencies
-1. run `script/test` to run the tests
-1.  You can also run `script/console` for an interactive prompt that will allow you to experiment.
+1. run `scripts/setup` to install dependencies
+1. run `scripts/test` to run the tests
+1.  You can also run `scripts/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`.
 

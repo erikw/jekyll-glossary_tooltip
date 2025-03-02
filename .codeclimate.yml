@@ -21,4 +21,4 @@ ratings:
   - "**.rb"
   - "**.js"
 exclude_paths:
-- script/
+- scripts/

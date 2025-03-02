@@ -1,4 +1,4 @@
-# Override jekyll verion from .gemspec
+# Override jekyll version from .gemspec
 
 appraise "jekyll-3.7.x" do
   gem "jekyll", "~> 3.7"

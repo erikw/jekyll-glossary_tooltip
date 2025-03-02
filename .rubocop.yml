@@ -1,7 +1,7 @@
 # See pages relaed at https://docs.rubocop.org/rubocop/1.12/cops_layout.html
 
-# Rubocop extensions
-require:
+# Rubocop plugins
+plugins:
   - rubocop-rake
   - rubocop-rspec
 

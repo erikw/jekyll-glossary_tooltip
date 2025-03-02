@@ -1,4 +1,4 @@
-# See pages relaed at https://docs.rubocop.org/rubocop/1.12/cops_layout.html
+# See pages related at https://docs.rubocop.org/rubocop/1.12/cops_layout.html
 
 # Rubocop plugins
 plugins:
@@ -7,7 +7,7 @@ plugins:
 
 inherit_mode:
   merge:
-    - Exclude  # Merge my AllCops.Excllude with default exludes from https://github.com/rubocop/rubocop/blob/master/config/default.yml
+    - Exclude  # Merge my AllCops.Exclude with default excludes from https://github.com/rubocop/rubocop/blob/master/config/default.yml
 
 AllCops:
   TargetRubyVersion: 3.0

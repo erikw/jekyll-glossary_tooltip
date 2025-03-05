@@ -11,6 +11,10 @@
 [![License](https://img.shields.io/github/license/erikw/jekyll-glossary_tooltip)](LICENSE.txt)
 [![OSS Lifecycle](https://img.shields.io/osslifecycle/erikw/jekyll-glossary_tooltip)](https://github.com/Netflix/osstracker)
 
+<p align="center">
+    <!-- Ref: https://dev.to/azure/adding-a-github-codespace-button-to-your-readme-5f6l -->
+    <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=390309485" title="Open in GitHub Codespaces" ><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg"></a>
+</p>
 
 :point_right: **Live demo**: https://erikw.github.io/jekyll-glossary_tooltip/
 

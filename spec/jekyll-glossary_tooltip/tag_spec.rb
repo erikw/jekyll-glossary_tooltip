@@ -22,6 +22,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:page4) { File.read(dest_dir("page4.html")) }
     let(:page5) { File.read(dest_dir("page5.html")) }
     let(:page6) { File.read(dest_dir("page6.html")) }
+    let(:page7) { File.read(dest_dir("page7.html")) }
 
     it "renders a glossary tag with a URL" do
       expect_tag_match(page1, "term_with_url")
@@ -45,6 +46,15 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
 
     it "renders a glossary tag with URL rendered from embedded liquid tags" do
       expect_tag_match(page6, "term_with_url_embedded_liquid", href: "/page2.html")
+    end
+
+    it "renders no unnecessary space after tooltip" do
+      # expect_tag_match(page7, "term_with_url", href: "/page2.html")
+      term_name = "term_without_url"
+      regex = %r{#{R1}#{term_name}#{R2}#{term_name} definition}
+      regex = Regexp.new(regex.source + %r{#{R5}, no space before comma.}.source)
+
+      expect(page7).to match(regex)
     end
   end
 

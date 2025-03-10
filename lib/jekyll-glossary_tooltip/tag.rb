@@ -15,12 +15,13 @@ module Jekyll
       def render(context)
         entry = lookup_entry(context.registers[:site], @opts[:term_query])
         @opts[:display] ||= @opts[:term_query]
-        <<~HTML
+        html = <<~HTML
           <span class="jekyll-glossary">
              #{@opts[:display]}
              <span class="jekyll-glossary-tooltip">#{entry["definition"]}#{render_tooltip_url(entry, context)}</span>
           </span>
         HTML
+        html.gsub("\n", "")
       end
 
       private

@@ -103,7 +103,8 @@ This could be e.g.
 {% glossary some term, display: some other display text %}
 ```
 
-**Note** that a term name can not contain a `,`, as this is the argument separator character.
+> [!WARNING]
+> A term name can not contain a `,`, as this is the argument separator character.
 
 
 ## CSS Style Override

@@ -16,7 +16,9 @@
     <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=390309485" title="Open in GitHub Codespaces" ><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg"></a>
 </p>
 
-:point_right: **Live demo**: https://erikw.github.io/jekyll-glossary_tooltip/
+> [!TIP]
+> :point_right: **Live demo**: https://erikw.github.io/jekyll-glossary_tooltip/
+
 
 <img src="/img/tooltip_screenshot.png" width="256" align="right" alt="Screenshot of the glossary tooltip term definition" title="Example of tooltip definition of the term 'Jekyll'.">
 

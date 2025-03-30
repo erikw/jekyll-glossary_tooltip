@@ -114,7 +114,7 @@ Simply modify the rules [jekyll-glossary_tooltip.css](lib/jekyll-glossary_toolti
 ## Page listing all terms
 Thanks to this user submitted [idea](https://github.com/erikw/jekyll-glossary_tooltip/issues/6) we have a way to create a page listing all terms with defintions and URLs.
 
-:point_right: **Live demo**: https://erikw.github.io/glossary.html
+:point_right: **Live demo**: https://erikw.github.io/jekyll-glossary_tooltip/glossary.html
 
 Steps:
 1. Install [jekyll-liquify](https://github.com/gemfarmer/jekyll-liquify) to your site according to its README instructions.

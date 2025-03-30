@@ -2,6 +2,7 @@
 [![Gem Version](https://badge.fury.io/rb/jekyll-glossary_tooltip.svg)](https://badge.fury.io/rb/jekyll-glossary_tooltip)
 [![Gem Downloads](https://img.shields.io/gem/dt/jekyll-glossary_tooltip?label=gem%20downloads)](https://rubygems.org/gems/jekyll-glossary_tooltip)
 [![Travis Build Status](https://img.shields.io/travis/com/erikw/jekyll-glossary_tooltip/main?logo=travis)](https://app.travis-ci.com/github/erikw/jekyll-glossary_tooltip)
+[![pages-build-deployment](https://github.com/erikw/jekyll-glossary_tooltip/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/erikw/jekyll-glossary_tooltip/actions/workflows/pages/pages-build-deployment)
 [![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/maintainability)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/maintainability)
 [![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
 [![CodeQL](https://github.com/erikw/jekyll-glossary_tooltip/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/erikw/jekyll-glossary_tooltip/actions/workflows/codeql-analysis.yml)

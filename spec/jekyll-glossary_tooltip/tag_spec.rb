@@ -51,8 +51,8 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     it "renders no unnecessary space after tooltip" do
       # expect_tag_match(page7, "term_with_url", href: "/page2.html")
       term_name = "term_without_url"
-      regex = %r{#{R1}#{term_name}#{R2}#{term_name} definition}
-      regex = Regexp.new(regex.source + %r{#{R5}, no space before comma.}.source)
+      regex = %r{#{R1}#{term_name}#{R2}#{R_PAR_OPEN}#{term_name} definition}
+      regex = Regexp.new(regex.source + %r{#{R_PAR_CLOSE}#{R5}, no space before comma.}.source)
 
       expect(page7).to match(regex)
     end

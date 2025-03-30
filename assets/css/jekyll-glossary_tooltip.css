@@ -57,3 +57,12 @@
 .jekyll-glossary:hover .jekyll-glossary-tooltip {
   opacity: 1;
 }
+
+/* HACK: hide surrounding parenthesis on definition. When Jekyll renders
+ * post.excerpt, all HTML and CSS is stripped. The effect is that the extra
+ * parenthesis that are added are hidden in the normal blog post with hoover, but
+ * hidden in the post.except when html and css is stripped. Ref:
+ * https://github.com/erikw/jekyll-glossary_tooltip/issues/7#issuecomment-2711471867 */
+ .jekyll-glossary-tooltip-hidden {
+    display: none;
+  }

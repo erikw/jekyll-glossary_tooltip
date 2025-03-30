@@ -14,4 +14,4 @@ Check out the source code ([`index.md`](https://github.com/erikw/jekyll-glossary
   * I can decide to style the term {% glossary url %} with a different case.
   * Or even with a different text all together: {% glossary URL, display: URLocator %}
 * Open this page in your mobile / touch device: it works as well to tap on term to open the definition!
-* You can also create a page listing [all glossary terms](/glossary.html).
+* You can also create a page listing [all glossary terms](glossary.html).

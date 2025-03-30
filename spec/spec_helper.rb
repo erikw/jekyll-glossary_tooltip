@@ -14,6 +14,8 @@ DEST_DIR   = File.expand_path("dest", __dir__)
 # Tag matching regex parts.
 R1 = %r{<span class="jekyll-glossary">\s*}
 R2 = %r{\s*<span class="jekyll-glossary-tooltip">\s*}
+R_PAR_OPEN = %r{\s*<span class="jekyll-glossary-tooltip-hidden">\(</span>\s*}
+R_PAR_CLOSE = %r{\s*<span class="jekyll-glossary-tooltip-hidden">\)</span>\s*}
 R3 = %r{\s*<br(\s/)?><a class="jekyll-glossary-source-link" href="}
 R4 = %r{" target="_blank"></a>\s*}
 R5 = %r{</span>\s*</span>}
@@ -64,12 +66,12 @@ RSpec.configure do |config|
   def expect_tag_match(content, term_name, url: true, term_display: nil, href: nil)
     term_display ||= term_name
 
-    regex = %r{#{R1}#{term_display}#{R2}#{term_name} definition}
+    regex = %r{#{R1}#{term_display}#{R2}#{R_PAR_OPEN}#{term_name} definition}
     if url
       href ||= "#{term_name} url"
       regex = Regexp.new(regex.source + %r{#{R3}#{href}#{R4}}.source)
     end
-    regex = Regexp.new(regex.source + %r{#{R5}}.source)
+    regex = Regexp.new(regex.source + %r{#{R_PAR_CLOSE}#{R5}}.source)
 
     expect(content).to match(regex)
   end

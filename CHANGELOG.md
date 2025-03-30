@@ -5,13 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- [BREAKING] Hidden with CSS parenthesis around term definition. These parenthesis will be revealed when jekyll produces a post.except as typically HTML and CSS stripped => the plain text rendering of the glossary tag will be "<term-name> (term-description> <term-url>)". [#7](https://github.com/erikw/jekyll-glossary_tooltip/issues/7)
+    - To upgrade to new version, you need to update the CSS by re-copy the full contexts of [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css) to your side. The new CSS class `.jekyll-glossary-tooltip-hidden` is added and needed to hide parenthesis in the tooltip.
+
 ## [1.5.1] - 2025-03-10
 ### Fixed
 - Strip newlines from generated HTML to prevent unnecessary spaces to be added. [#9](https://github.com/erikw/jekyll-glossary_tooltip/issues/9)
 
 ## [1.5.0] - 2022-09-08
 ### Added
-- Support for embedded liqid tags in the url field. ([#3](https://github.com/erikw/jekyll-glossary_tooltip/issues/3])
+- Support for embedded liquid tags in the url field. ([#3](https://github.com/erikw/jekyll-glossary_tooltip/issues/3])
 
 ## [1.4.0] - 2021-08-18
 ### Changed

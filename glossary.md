@@ -1,6 +1,5 @@
 ---
 title: "Glossary"
-permalink: /glossary/
 layout: page
 ---
 

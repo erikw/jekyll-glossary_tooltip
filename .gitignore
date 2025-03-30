@@ -1,1 +1,2 @@
-_site/ # In case of git-switch from gh-pages-source and this directory is still there.
+# In case of git-switch from gh-pages-source and this directory is still there.
+_site/

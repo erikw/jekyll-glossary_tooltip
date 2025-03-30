@@ -108,6 +108,16 @@ This could be e.g.
 Simply modify the rules [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css) that you copied to your project. The tooltip is based on this [tutorial](https://www.w3schools.com/css/css_tooltip.asp). View the generated HTML output to see the HTML tags that are styled, or check the [tag.rb](lib/jekyll-glossary_tooltip/tag.rb) implementation in the method `render()`.
 
 
+## Page listing all terms
+Thanks to this user submitted [idea](https://github.com/erikw/jekyll-glossary_tooltip/issues/6) we have a way to create a page listing all terms with defintions and URLs.
+
+:point_right: **Live demo**: https://erikw.github.io/glossary.html
+
+Steps:
+1. Install [jekyll-liquify](https://github.com/gemfarmer/jekyll-liquify) to your site according to its README instructions.
+1. Create a new page in your site similar to [glossary.md](https://github.com/erikw/jekyll-glossary_tooltip/blob/gh-pages-source/glossary.md?plain=1)
+1. Build your site and access your new page listing all terms!
+
 # Development
 The structure of this plugin was inspired by [https://ayastreb.me/writing-a-jekyll-plugin/](https://ayastreb.me/writing-a-jekyll-plugin/), the plugin jekyll-sitemap and the [Bundler Gem tutorial](https://bundler.io/guides/creating_gem.html).
 

@@ -93,15 +93,15 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  jekyll (~> 4.4)
+  jekyll (~> 4.0)
   jekyll-feed (~> 0.6)
   jekyll-glossary_tooltip (~> 1.0)
   jekyll-liquify (= 0.0.2)
   kramdown-parser-gfm
-  minima (~> 2.5)
-  rake
-  rake-jekyll
+  minima (~> 2.0)
+  rake (~> 10.5)
+  rake-jekyll (~> 1.1)
   webrick
 
 BUNDLED WITH
-   2.2.22
+   2.6.6

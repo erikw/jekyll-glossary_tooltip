@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 4.4'
+gem 'jekyll', '~> 4.0'
 gem 'kramdown-parser-gfm' # Needed for kramdown v2
 gem 'webrick'
 
 group :development do
-  gem 'rake', require: false
-  gem 'rake-jekyll', require: false
+  gem 'rake', '~> 10.5', require: false
+  gem 'rake-jekyll', '~> 1.1', require: false
 end
 
 group :jekyll_themes do
-  gem 'minima', '~> 2.5'
+  gem 'minima', '~> 2.0'
   # gem 'jekyll-remote-theme'
 end
 

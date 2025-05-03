@@ -1,4 +1,4 @@
-# Jekyll Glossary Tooltip Tag Plugin [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20a%20nifty%20tooltip%20for%20term%20definitions%20in%20your%20Jekyll%20blog%20with%20this%20plugin&url=https://github.com/erikw/jekyll-glossary_tooltip&via=erik_westrup&hashtags=jekyll,plugin)
+# Jekyll Glossary Tooltip Tag Plugin [![Post on X](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://x.com/intent/tweet?text=Get%20a%20nifty%20tooltip%20for%20term%20definitions%20in%20your%20Jekyll%20blog%20with%20this%20plugin&url=https://github.com/erikw/jekyll-glossary_tooltip&via=erik_westrup&hashtags=jekyll,plugin)
 [![Gem Version](https://badge.fury.io/rb/jekyll-glossary_tooltip.svg)](https://badge.fury.io/rb/jekyll-glossary_tooltip)
 [![Gem Downloads](https://img.shields.io/gem/dt/jekyll-glossary_tooltip?label=gem%20downloads)](https://rubygems.org/gems/jekyll-glossary_tooltip)
 [![Travis Build Status](https://img.shields.io/travis/com/erikw/jekyll-glossary_tooltip/main?logo=travis)](https://app.travis-ci.com/github/erikw/jekyll-glossary_tooltip)

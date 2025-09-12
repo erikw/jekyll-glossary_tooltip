@@ -23,9 +23,9 @@
 
 <img src="/img/tooltip_screenshot.png" width="256" align="right" alt="Screenshot of the glossary tooltip term definition" title="Example of tooltip definition of the term 'Jekyll'.">
 
-This plugin simplifies for your readers and you by making it easy to define terms or abbreviations that needs an explanation. Define a common dictionary of terms and their definition in a YAML file. Then inside markdown files you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definition on mouse hover.
+This plugin simplifies things for your website visitors and you by making it easy to define terms or abbreviations that need an explanation. Define a common dictionary of terms and their definition in a YAML file. Then, inside the markdown file, you can use the provided glossary liquid tag to insert a tooltip for a defined word from the dictionary. The tooltip will show the term definition on mouse hover.
 
-It's also possible to provide an optional URL to for example a term definition source reference. To also support mobile devices, this URL link is placed inside the tooltip pop-up itself, rather than making the term itself clickable. This is so that on mobile device, you will first tap the word to get the hover tooltip, then click the link in the tooltip if desired.
+It's also possible to provide an optional URL for, for example, a term definition source reference. To also support mobile devices, this URL link is placed inside the tooltip pop-up itself, rather than making the term itself clickable. This is so that on a mobile device, you will first tap the word to get the hover tooltip, then click the link in the tooltip if desired.
 
 
 # Installation
@@ -49,8 +49,8 @@ It's also possible to provide an optional URL to for example a term definition s
    ```
 1. Create a `_data/glossary.yml` file, according to the 'Glossary Term Definition File' section below, with your terms.
 1. Use the liquid tag in a page like `{% glossary term_name %}`
-1. Add CSS styling for the tooltip from [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css). You need to make sure that the pages where you will use the glossary tag have this styling applied. Typically this would mean 1) copying this file to your `assets/css/` directory 2) editing your theme's template for blog posts (or what pages you desire) to include this CSS in the header like `<link rel="stylesheet" href="/assets/css/jekyll-glossary_tooltip.css">`. However you could also copy this file's content in to your `main.css` or `main.scss` or however you build your site's CSS.
-1. Now just build your site and you will get nice nice term definition tooltips on mouse hover (or mobile, tap) for you terms!
+1. Add CSS styling for the tooltip from [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css). You need to make sure that the pages where you will use the glossary tag have this styling applied. Typically, this would mean 1) copying this file to your `assets/css/` directory, 2) editing your theme's template for blog posts (or what pages you desire) to include this CSS in the header like `<link rel="stylesheet" href="/assets/css/jekyll-glossary_tooltip.css">`. However, you could also copy this file's content into your `main.css` or `main.scss` or however you build your site's CSS.
+1. Now just build your site, and you will get nice, nice term definition tooltips on mouse hover (or mobile, tap) for your terms!
    ```shell
    bundle exec jekyll build
    ```
@@ -70,15 +70,15 @@ Create a file `_data/glossary.yml` to host your shared term definition entries. 
 This could look something like:
 ```markdown
 - term: Jekyll
-  definition: A Static Site Generator (SSG) built with ruby. Widely adopted as of GitHub Pages inclusion.
+  definition: A Static Site Generator (SSG) built with Ruby. Widely adopted as of GitHub Pages inclusion.
   url: https://jekyllrb.com/
 - term: SSG
-  definition: A Static Site Generator compiles the website before deployment. Then the generated web content is simply retrieved as-is by the client without any code running at retrieve time.
+  definition: A Static Site Generator compiles the website before deployment. Then the generated web content is simply retrieved as-is by the client without any code running at retrieval time.
 - term: Jamstack
-  definition: JavaScript + API + Markup - a way of buildin and hosting websites.
+  definition: JavaScript + API + Markup - a way of building and hosting websites.
   url: https://jamstack.org/
 - term: EmbeddedLiquidURL
-  definition: This definition has an URL with embedded liquid tags to make it dynamic at build time. Note special YAML syntax for being able to use liquid (1.)
+  definition: This definition has a URL with embedded liquid tags to make it dynamic at build time. Note special YAML syntax for being able to use liquid (1.)
   url: >
     {{ site.baseurl }}{% link page2.md %}
 ```
@@ -87,7 +87,7 @@ This could look something like:
 
 
 ## Tag Usage
-On any page where you've made sure include the needed CSS styling, you can use the glossary tag simply like
+On any page where you've made sure to include the needed CSS styling, you can use the glossary tag simply like
 
 ```markdown
 Here I'm talking about {% glossary term_name %} in a blog post.
@@ -96,14 +96,14 @@ The term name can contain spaces like {% glossary operating system %}.
 
 Even if the term is defined in _data/glossary.yml as 'term_name', the matching is case-insensitive
 meaning that I can look it up using {% glossary TeRM_NaME %}. Note that the term is displayed as
-defined in the tag rather than the definition, here meaing 'TeRM_NaME'.
+defined in the tag rather than the definition, here meaning 'TeRM_NaME'.
 
 The case-styling above works as there's still a case-insensitive match. But what about when you
-actually want to dispaly the term differently? Maybe the term is defined as "cat" but you want to
+actually want to display the term differently? Maybe the term is defined as "cat," but you want to
 use the plural "cats"? Then you can supply an optional `display` argument. The syntax is:
 {% glossary <term>, display: <diplay name> %}
 
-This could be e.g.
+This could be, e.g.
 {% glossary cat, display: cats %}
 {% glossary some term, display: some other display text %}
 ```
@@ -117,7 +117,7 @@ Simply modify the rules [jekyll-glossary_tooltip.css](lib/jekyll-glossary_toolti
 
 
 ## Page listing all terms
-Thanks to this user submitted [idea](https://github.com/erikw/jekyll-glossary_tooltip/issues/6) we have a way to create a page listing all terms with defintions and URLs.
+Thanks to this user-submitted [idea](https://github.com/erikw/jekyll-glossary_tooltip/issues/6) we have a way to create a page listing all terms with definitions and URLs.
 
 :point_right: **Live demo**: https://erikw.github.io/jekyll-glossary_tooltip/glossary.html
 
@@ -130,7 +130,7 @@ Steps:
 The structure of this plugin was inspired by [https://ayastreb.me/writing-a-jekyll-plugin/](https://ayastreb.me/writing-a-jekyll-plugin/), the plugin jekyll-sitemap and the [Bundler Gem tutorial](https://bundler.io/guides/creating_gem.html).
 
 After checking out the repo;
-1. Install [RVM](https://rvm.io/rvm/install) and install a supported ruby version (see .gemspec)
+1. Install [RVM](https://rvm.io/rvm/install) and install a supported Ruby version (see .gemspec)
 1. run `scripts/setup` to install dependencies
 1. run `scripts/test` to run the tests
    * Run a specific test with `bundle exec rspec -e "name of test example"`
@@ -149,13 +149,13 @@ Following the setup at [how-to-specify-local-ruby-gems-in-your-gemfile](https://
 1. Configure bundler to use a local path for this gem in this project:
    - `$ bundle config --local local.jekyll-glossary_tooltip ~/src/jekyll-glossary_tooltip`
 1. Update the project: `$ bundle install`
-1. Now the project will build with the local clone of this plugin when issuing e.g. `bundle exec jekyll build`
+1. Now the project will build with the local clone of this plugin when issuing e.g., `bundle exec jekyll build`
 1. When you're done:
   - Remove the local override with: `$ bundle config --delete local.jekyll-glossary_tooltip`
-  - Optionally restore the original gem include in `Gemfile` or keep building from a branch in the github repo.
+  - Optionally restore the original gem included in `Gemfile` or keep building from a branch in the GitHub repo.
 
 ## Releasing
-Instructions for releasing on rubygems.org below. Optionally make a GitHub [release](https://github.com/erikw/jekyll-glossary_tooltip/releases) after this for the pushed git tag.
+Instructions for releasing on rubygems.org are below. Optionally make a GitHub [release](https://github.com/erikw/jekyll-glossary_tooltip/releases) after this for the pushed git tag.
 
 ## Using bundler/gem_tasks rake tasks
 Following instructions from [bundler.io](https://bundler.io/guides/creating_gem.html#releasing-the-gem):
@@ -179,7 +179,7 @@ gem bump --version minor --tag --push --release --sign
 For `--version`, use `major|minor|patch` as needed.
 
 ## Multi-versions
-* For ruby, just use RVM to switch between supported ruby version specified in `.gemspec`.
+* For Ruby, just use RVM to switch between supported Ruby versions specified in `.gemspec`.
 * To run with different jekyll versions, [Appraisal](https://github.com/thoughtbot/appraisal) is used with [`Appraisals`](Appraisals) to generate different [`gemfiles/`](gemfiles/)
    - To use a specific Gemfile, run like
       ```shell
@@ -206,7 +206,7 @@ To use the [travis cli client](https://github.com/travis-ci/travis.rb) (installe
    ```shell
    bundle exec travis endpoint --set-default --api-endpoint https://api.travis-ci.com/
    ```
-1. Login with the cli client
+1. Log in with the CLI client
    ```shell
    bundle exec travis login --github-token $GITHUB_TOKEN
    ```

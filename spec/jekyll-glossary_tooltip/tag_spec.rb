@@ -23,6 +23,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     let(:page5) { File.read(dest_dir("page5.html")) }
     let(:page6) { File.read(dest_dir("page6.html")) }
     let(:page7) { File.read(dest_dir("page7.html")) }
+    let(:page8) { File.read(dest_dir("page8.html")) }
 
     it "renders a glossary tag with a URL" do
       expect_tag_match(page1, "term_with_url")
@@ -55,6 +56,11 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
       regex = Regexp.new(regex.source + %r{#{R_PAR_CLOSE}#{R5}, no space before comma.}.source)
 
       expect(page7).to match(regex)
+    end
+
+    it "renders a glossary tag with Unicode characters in display" do
+      # verify that the parser accepts ‘display’ with accents/Unicode
+      expect_tag_match(page8, "term_with_url", term_display: "José Álvarez")
     end
   end
 

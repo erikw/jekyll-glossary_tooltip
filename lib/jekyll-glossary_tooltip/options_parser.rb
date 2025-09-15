@@ -7,7 +7,7 @@ module Jekyll
     # Stripped down & modified version of
     # https://github.com/ayastreb/jekyll-maps/blob/master/lib/jekyll-maps/options_parser.rb
     class OptionsParser
-      ARGS_PATTERN = %r{\s*(\w[-_\w]*):\s*(\w[^,\n\r]*)}
+      ARGS_PATTERN = %r{\s*([\p{L}_][-\p{L}_]*):\s*([\p{L}_][^,\n\r]*)}
       ARGS_ALLOWED = %w[
         display
       ].freeze

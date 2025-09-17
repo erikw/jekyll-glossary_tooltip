@@ -18,9 +18,7 @@ module Jekyll
         html = <<~HTML
           <span class="jekyll-glossary">
             #{@opts[:display]}
-            <span class="jekyll-glossary-tooltip">
-              <span class="jekyll-glossary-tooltip-hidden">(</span>#{entry["definition"]}#{render_tooltip_url(entry, context)}<span class="jekyll-glossary-tooltip-hidden">)</span>
-            </span>
+            <span class="jekyll-glossary-tooltip"><span class="jekyll-glossary-tooltip-hidden">(</span>#{entry["definition"]}#{render_tooltip_url(entry, context)}<span class="jekyll-glossary-tooltip-hidden">)</span></span>
           </span>
         HTML
         html.gsub("\n", "")

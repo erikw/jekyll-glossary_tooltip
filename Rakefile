@@ -13,7 +13,14 @@ RSpec::Core::RakeTask.new(:spec)
 require "rubocop/rake_task"
 RuboCop::RakeTask.new(:rubocop) do |t|
   # See https://docs.rubocop.org/rubocop/usage/basic_usage.html
-  t.options = ['--display-cop-names', '--parallel']
+  t.options = ["--display-cop-names", "--parallel"]
+end
+
+desc "Run Qlty code analysis"
+task :qlty do
+  sh "qlty smells --all"
+  sh "qlty metrics --all --max-depth=2 --sort complexity --limit 10"
+  # sh "qlty lint" # Just runs rubocop, not necessary as we have a task for this already
 end
 
 # default task: Add spec and rubocop to default tasks.

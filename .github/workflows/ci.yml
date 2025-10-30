@@ -7,6 +7,11 @@ on:
   pull_request:
     branches: main
 
+# OIDC permissions for qlty
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -20,7 +25,6 @@ jobs:
 
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
-      #CC_TEST_REPORTER_ID: 9a84a9f695de3b120b6fcead4e089b45420f7518fb2123dc5424f862d381c4ff
 
     steps:
       - name: Checkout code
@@ -38,3 +42,9 @@ jobs:
 
       - name: Run linting
         run: bundle exec rake rubocop
+
+      - uses: qltysh/qlty-action/coverage@v2
+        with:
+          oidc: true
+          format: simplecov
+          files: coverage/.resultset.json

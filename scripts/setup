@@ -6,3 +6,7 @@ set -vx
 rvm install ruby-$(cat .ruby-version)
 gem install bundler -v 2.2.18
 bundle install
+
+
+# Qlty CLI tool. Ref: https://docs.qlty.sh/cli/quickstart
+curl https://qlty.sh | sh

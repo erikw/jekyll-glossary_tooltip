@@ -171,10 +171,11 @@ gem install pkg/jekyll-glossary_tooltip-$ver.gem
 bundle exec rake release
 ```
 
-## Using gem-release gem extension
+## [recommended] Using gem-release gem extension
 Using [gem-release](https://github.com/svenfuchs/gem-release):
 ```shell
 vi CHANGELOG.md && git add CHANGELOG.md && git commit -m "Update CHANGELOG.md" && git push
+gem signin
 gem bump --version minor --tag --push --release --sign
 ```
 For `--version`, use `major|minor|patch` as needed.

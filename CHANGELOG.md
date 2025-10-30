@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Unicode support [#20](https://github.com/erikw/jekyll-glossary_tooltip/pull/20)
+### Changed
+- Migrated CI from Travis to GitHub Actions.
 
 ## [2.0.0] - 2025-03-31
 ### Added

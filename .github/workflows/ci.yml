@@ -1,0 +1,40 @@
+name: Continuous Integration
+
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ruby: [2.7.0, 3.0.1]
+        gemfile:
+          - gemfiles/jekyll_3.7.x.gemfile
+          - gemfiles/jekyll_4.x.x.gemfile
+
+    env:
+      BUNDLE_GEMFILE: ${{ matrix.gemfile }}
+      #CC_TEST_REPORTER_ID: 9a84a9f695de3b120b6fcead4e089b45420f7518fb2123dc5424f862d381c4ff
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+          bundler: 2.2.18
+
+      - name: Run tests
+        run: bundle exec rake spec
+
+      - name: Run linting
+        run: bundle exec rake rubocop

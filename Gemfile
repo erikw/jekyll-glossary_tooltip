@@ -16,14 +16,13 @@ group :development, :test do
   gem "gem-release", "~> 2.0", require: false
   gem "rake", "~> 13.0", require: false
   gem "solargraph", require: false
-  gem "travis", "~> 1.0", require: false
 end
 
 group :test do
+  gem "json_pure", "~> 2.8", require: false # Solargraph pulls in v2.6.3 which fails build with " uninitialized constant JSON::Fragment"
   gem "rspec", "~> 3.0"
   gem "rubocop", "~> 1.18", require: false
   gem "rubocop-rake", "~> 0.6", require: false
   gem "rubocop-rspec", "~> 3.5", require: false
   gem "simplecov", "~> 0.22"
-  gem "json_pure", "~> 2.8", require: false # Solargraph pulls in v2.6.3 which fails build with " uninitialized constant JSON::Fragment"
 end

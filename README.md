@@ -1,7 +1,6 @@
 # Jekyll Glossary Tooltip Tag Plugin [![Post on X](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://x.com/intent/tweet?text=Get%20a%20nifty%20tooltip%20for%20term%20definitions%20in%20your%20Jekyll%20blog%20with%20this%20plugin&url=https://github.com/erikw/jekyll-glossary_tooltip&via=erik_westrup&hashtags=jekyll,plugin)
 [![Gem Version](https://badge.fury.io/rb/jekyll-glossary_tooltip.svg)](https://badge.fury.io/rb/jekyll-glossary_tooltip)
 [![Gem Downloads](https://img.shields.io/gem/dt/jekyll-glossary_tooltip?label=gem%20downloads)](https://rubygems.org/gems/jekyll-glossary_tooltip)
-[![Travis Build Status](https://img.shields.io/travis/com/erikw/jekyll-glossary_tooltip/main?logo=travis)](https://app.travis-ci.com/github/erikw/jekyll-glossary_tooltip)
 [![pages-build-deployment](https://github.com/erikw/jekyll-glossary_tooltip/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/erikw/jekyll-glossary_tooltip/actions/workflows/pages/pages-build-deployment)
 [![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/maintainability)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/maintainability)
 [![Code Climate Test Coverage](https://api.codeclimate.com/v1/badges/7ffb648ec4b77f3f9eb8/test_coverage)](https://codeclimate.com/github/erikw/jekyll-glossary_tooltip/test_coverage)
@@ -195,29 +194,6 @@ For `--version`, use `major|minor|patch` as needed.
       bundle exec appraisal install
       bundle exec appraisal generate
       ```
-
-## Travis
-To use the [travis cli client](https://github.com/travis-ci/travis.rb) (installed from `Gemfile`):
-1. Get a GitHub OAuth token by
-   - going to [github.com/settings/tokens](https://github.com/settings/tokens)
-   - create a new token named `travis-cli`
-   - Set the scopes `repo`, `read:org`, `user:email` according to the [docs](https://docs.travis-ci.com/user/github-oauth-scopes).
-1. Set travis.com as the default so we don't need to add `--pro` to most commands
-   ```shell
-   bundle exec travis endpoint --set-default --api-endpoint https://api.travis-ci.com/
-   ```
-1. Log in with the CLI client
-   ```shell
-   bundle exec travis login --github-token $GITHUB_TOKEN
-   ```
-1. Now the cli client can be used (might need `--pro` to use travis.com)
-   ```shell
-   bundle exec travis lint
-   bundle exec travis accounts
-   bundle exec travis status
-   bundle exec travis branches
-   bundle exec travis monitor
-   ```
 
 ## Live Demo GitHub Pages
 The live demo source is in the branch [`gh-pages-source`](https://github.com/erikw/jekyll-glossary_tooltip/tree/gh-pages-source). Check its `README.md`!

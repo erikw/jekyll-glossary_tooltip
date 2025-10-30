@@ -9,7 +9,6 @@ group :development, :test do
   gem "gem-release", "~> 2.0", require: false
   gem "rake", "~> 13.0", require: false
   gem "solargraph", require: false
-  gem "travis", "~> 1.0", require: false
 end
 
 group :test do

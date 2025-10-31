@@ -44,7 +44,7 @@ jobs:
         run: bundle exec rake rubocop
 
       - name: Publish code coverage to qlty
-      - uses: qltysh/qlty-action/coverage@v2
+        uses: qltysh/qlty-action/coverage@v2
         with:
           oidc: true
           format: simplecov

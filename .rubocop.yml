@@ -7,17 +7,17 @@ plugins:
 
 inherit_mode:
   merge:
-    - Exclude  # Merge my AllCops.Exclude with default excludes from https://github.com/rubocop/rubocop/blob/master/config/default.yml
+    - Exclude # Merge my AllCops.Exclude with default excludes from https://github.com/rubocop/rubocop/blob/master/config/default.yml
 
 AllCops:
   TargetRubyVersion: 3.0
   Include:
-  - lib/**/*.rb
-  - spec/**/*.rb
+    - lib/**/*.rb
+    - spec/**/*.rb
   Exclude:
-  # Travis: during build there will be a lot of rubocop config files in this path which will cause build failure as the refer to gems which are not installed by this project.
-  # See https://github.com/rubocop/rubocop/issues/9832
-  - gemfiles/vendor/bundle/**/*
+    # Travis: during build there will be a lot of rubocop config files in this path which will cause build failure as the refer to gems which are not installed by this project.
+    # See https://github.com/rubocop/rubocop/issues/9832
+    - gemfiles/vendor/bundle/**/*
   NewCops: disable
 
 Gemspec/DeprecatedAttributeAssignment:
@@ -30,7 +30,7 @@ Layout/LineEndStringConcatenationIndentation:
 Layout/EmptyLineBetweenDefs:
   Enabled: true
   Exclude:
-  - lib/jekyll-glossary_tooltip/errors.rb
+    - lib/jekyll-glossary_tooltip/errors.rb
 Layout/SpaceBeforeBrackets:
   Enabled: true
 
@@ -93,11 +93,13 @@ Metrics/BlockLength:
 Metrics/MethodLength:
   Enabled: true
   Max: 25
+Metrics/ParameterLists:
+  Max: 6
 
 Naming/FileName:
   Enabled: false
   Exclude:
-  - lib/jekyll-glossary_tooltip.rb
+    - lib/jekyll-glossary_tooltip.rb
 Naming/InclusiveLanguage:
   Enabled: true
 Naming/BlockForwarding:
@@ -113,7 +115,7 @@ Style/CollectionCompact:
 Style/Documentation:
   Enabled: true
   Exclude:
-  - lib/jekyll-glossary_tooltip/errors.rb
+    - lib/jekyll-glossary_tooltip/errors.rb
 Style/DocumentDynamicEvalDefinition:
   Enabled: true
 Style/EndlessMethod:
@@ -141,7 +143,7 @@ Style/RegexpLiteral:
 Style/SingleLineMethods:
   Enabled: true
   Exclude:
-  - lib/jekyll-glossary_tooltip/errors.rb
+    - lib/jekyll-glossary_tooltip/errors.rb
 Style/StringChars:
   Enabled: true
 Style/StringLiterals:
@@ -169,7 +171,6 @@ Style/RedundantSelfAssignmentBranch:
 Style/SelectByRegexp:
   Enabled: true
 
-
 # Reference: https://github.com/rubocop/rubocop-rake/blob/master/config/default.yml
 Rake:
   Enabled: true
@@ -191,10 +192,10 @@ RSpec/MultipleMemoizedHelpers:
   Enabled: true
   Max: 10
 RSpec/SpecFilePathFormat:
- # Disable to match structure of lib/. For jekyll plugin inclusion convention features, not having lib/jekyll/sth.rb but lib/jekyll-sth.rb
+  # Disable to match structure of lib/. For jekyll plugin inclusion convention features, not having lib/jekyll/sth.rb but lib/jekyll-sth.rb
   Enabled: false
 RSpec/SpecFilePathSuffix:
- # Disable to match structure of lib/. For jekyll plugin inclusion convention features, not having lib/jekyll/sth.rb but lib/jekyll-sth.rb
+  # Disable to match structure of lib/. For jekyll plugin inclusion convention features, not having lib/jekyll/sth.rb but lib/jekyll-sth.rb
   Enabled: false
 RSpec/IndexedLet:
   Enabled: false

@@ -42,7 +42,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
     end
 
     it "renders a glossary tag with alternative display name" do
-      expect_tag_match(page5, "term_with_url", term_display: "term alt display name")
+      expect_tag_match(page5, "term_with_url", term_display: "term alt display name", tooltip_prefix: "term_with_url: ")
     end
 
     it "renders a glossary tag with URL rendered from embedded liquid tags" do
@@ -60,7 +60,7 @@ RSpec.describe Jekyll::GlossaryTooltip::Tag do
 
     it "renders a glossary tag with Unicode characters in display" do
       # verify that the parser accepts ‘display’ with accents/Unicode
-      expect_tag_match(page8, "term_with_url", term_display: "José Álvarez")
+      expect_tag_match(page8, "term_with_url", term_display: "José Álvarez", tooltip_prefix: "term_with_url: ")
     end
   end
 

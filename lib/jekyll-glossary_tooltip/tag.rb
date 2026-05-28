@@ -2,6 +2,7 @@
 
 require "jekyll"
 require "jekyll-glossary_tooltip/errors"
+require "jekyll-glossary_tooltip/options_parser"
 
 module Jekyll
   module GlossaryTooltip
@@ -14,11 +15,11 @@ module Jekyll
 
       def render(context)
         entry = lookup_entry(context.registers[:site], @opts[:term_query])
-        @opts[:display] ||= @opts[:term_query]
+        display = @opts[:display] || @opts[:term_query]
         html = <<~HTML
           <span class="jekyll-glossary">
-            #{@opts[:display]}
-            <span class="jekyll-glossary-tooltip"><span class="jekyll-glossary-tooltip-hidden">(</span>#{entry["definition"]}#{render_tooltip_url(entry, context)}<span class="jekyll-glossary-tooltip-hidden">)</span></span>
+            #{display}
+            <span class="jekyll-glossary-tooltip"><span class="jekyll-glossary-tooltip-hidden">(</span>#{render_tooltip_definition(entry)}#{render_tooltip_url(entry, context)}<span class="jekyll-glossary-tooltip-hidden">)</span></span>
           </span>
         HTML
         html.gsub("\n", "")
@@ -27,6 +28,12 @@ module Jekyll
       private
 
       LOG_TAG = "Glossary Tag:"
+
+      def render_tooltip_definition(entry)
+        return entry["definition"] unless @opts[:display]
+
+        "#{entry["term"]}: #{entry["definition"]}"
+      end
 
       def render_tooltip_url(entry, context)
         # The content of the anchor is set from the CSS class jekyll-glossary-source-link,

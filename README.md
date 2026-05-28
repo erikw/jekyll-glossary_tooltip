@@ -107,6 +107,9 @@ use the plural "cats"? Then you can supply an optional `display` argument. The s
 This could be, e.g.
 {% glossary cat, display: cats %}
 {% glossary some term, display: some other display text %}
+
+When `display:` is used, the tooltip prepends the original glossary term before the definition so
+readers still get the term's original context.
 ```
 
 > [!WARNING]

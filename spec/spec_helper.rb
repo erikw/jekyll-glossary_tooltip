@@ -63,10 +63,11 @@ RSpec.configure do |config|
   end
 
   # Expect HTML tag components to match given content.
-  def expect_tag_match(content, term_name, url: true, term_display: nil, href: nil)
+  def expect_tag_match(content, term_name, url: true, term_display: nil, href: nil, tooltip_prefix: nil)
     term_display ||= term_name
+    tooltip_prefix ||= ""
 
-    regex = %r{#{R1}#{term_display}#{R2}#{R_PAR_OPEN}#{term_name} definition}
+    regex = %r{#{R1}#{term_display}#{R2}#{R_PAR_OPEN}#{tooltip_prefix}#{term_name} definition}
     if url
       href ||= "#{term_name} url"
       regex = Regexp.new(regex.source + %r{#{R3}#{href}#{R4}}.source)

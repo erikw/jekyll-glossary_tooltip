@@ -7,36 +7,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.0] - 2026-05-29
+
 ### Added
+
 * The plugin now automatically injects its bundled tooltip CSS as a `<style>` block into every rendered HTML page — no manual CSS setup required. [#1](https://github.com/erikw/jekyll-glossary_tooltip/issues/1)
   * To disable automatic injection and provide your own stylesheet, set `glossary_tooltip: { include_default_style: false }` in `_config.yml`.
   * **Upgrading from a previous version?** If you were already manually copying and including the CSS, you can remove that manual step after upgrading. If you leave it in place, both styles will load — the injected one and your linked one. To avoid this, either remove your manual `<link>` tag or set `include_default_style: false` and keep your own stylesheet.
 
 ### Changed
+
 * When using `display:`, the tooltip now prepends the original glossary term before the definition to preserve the original term context. [#19](https://github.com/erikw/jekyll-glossary_tooltip/issues/19)
 
 ## [2.1.0] - 2025-10-30
 
 ### Added
+
 * Unicode support [#20](https://github.com/erikw/jekyll-glossary_tooltip/pull/20)
 
 ### Changed
+
 * Migrated CI from Travis to GitHub Actions.
 
 ## [2.0.0] - 2025-03-31
 
 ### Added
+
 * [BREAKING] Hidden with CSS parenthesis around term definition. These parenthesis will be revealed when jekyll produces a post.except as typically HTML and CSS stripped => the plain text rendering of the glossary tag will be "<term-name> (term-description> <term-url>)". [#7](https://github.com/erikw/jekyll-glossary_tooltip/issues/7)
   * To **upgrade** to new version, you need to update the CSS by re-copy the full contexts of [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css) to your side. The new CSS class `.jekyll-glossary-tooltip-hidden` is added and needed to hide parenthesis in the tooltip.
 
 ## [1.5.1] - 2025-03-10
 
 ### Fixed
+
 * Strip newlines from generated HTML to prevent unnecessary spaces to be added. [#9](https://github.com/erikw/jekyll-glossary_tooltip/issues/9)
 
 ## [1.5.0] - 2022-09-08
 
 ### Added
+
 * Support for embedded liquid tags in the url field. ([#3](https://github.com/erikw/jekyll-glossary_tooltip/issues/3])
 
 ## [1.4.0] - 2021-08-18
@@ -48,34 +57,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.3.1] - 2021-08-18
 
 ### Added
+
 * GitHub workflow to publish to GitHub Packages.
 
 ## [1.3.1] - 2021-08-18
 
 ### Fixed
+
 * gemspec dependency range stynax.
 
 ## [1.3.0] - 2021-08-07
 
 ### Changed
+
 * Open the souce link from a tooltip in a new tab.
 
 ## [1.2.0] - 2021-08-06
 
 ### Added
+
 * Bottom arrow to the tooltip.
 * Tooltip hover animation from invisible to visible.
 
 ### Changed
+
 * Restyle the glossary term bottom border style and color.
 
 ## [1.1.0] - 2021-08-06
 
 ### Added
+
 * Optional `display:` argument to set a different term display name, rather than using the term name as defined in the glossary file. Usage: `{% glossary term_name, display: Different Name To Display %}`.
 
 ## [1.0.0] - 2021-08-05
+
 * No changes from `v0.1.0` but just bumping to final first major release version!
 
 ## [0.1.0] - 2021-08-05
+
 * First release version. The plugin is fully working but I suspect that there might be a few point releases just to nail the release process. Once this is working, there will soon be an 1.0.0 release!

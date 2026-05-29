@@ -1,0 +1,4 @@
+# This file must exist, as Jekyll will print a warning during build otherwise.
+title: CSS Injection Disabled Test Site
+glossary_tooltip:
+  include_default_style: false

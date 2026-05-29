@@ -50,7 +50,6 @@ It's also possible to provide an optional URL for, for example, a term definitio
    ```
 1. Create a `_data/glossary.yml` file, according to the 'Glossary Term Definition File' section below, with your terms.
 1. Use the liquid tag in a page like `{% glossary term_name %}`
-1. Add CSS styling for the tooltip from [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css). You need to make sure that the pages where you will use the glossary tag have this styling applied. Typically, this would mean 1) copying this file to your `assets/css/` directory, 2) editing your theme's template for blog posts (or what pages you desire) to include this CSS in the header like `<link rel="stylesheet" href="/assets/css/jekyll-glossary_tooltip.css">`. However, you could also copy this file's content into your `main.css` or `main.scss` or however you build your site's CSS.
 1. Now just build your site, and you will get nice, nice term definition tooltips on mouse hover (or mobile, tap) for your terms!
    ```shell
    bundle exec jekyll build
@@ -117,7 +116,18 @@ readers still get the term's original context.
 
 
 ## CSS Style Override
-Simply modify the rules [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css) that you copied to your project. The tooltip is based on this [tutorial](https://www.w3schools.com/css/css_tooltip.asp). View the generated HTML output to see the HTML tags that are styled, or check the [tag.rb](lib/jekyll-glossary_tooltip/tag.rb) implementation in the method `render()`.
+The plugin automatically injects its bundled tooltip CSS as a `<style>` block into every rendered HTML page, so no manual CSS setup is required.
+
+The injected styles are placed at the start of `<head>`, which means any CSS your site loads afterward will naturally take precedence. To override specific rules, simply add your own declarations in your site's stylesheet — they will win without any extra configuration.
+
+If you want full control (e.g., to replace the styles entirely with your own stylesheet), you can disable the built-in injection in `_config.yml`:
+
+```yml
+glossary_tooltip:
+  include_default_style: false
+```
+
+Then add your own CSS based on [jekyll-glossary_tooltip.css](lib/jekyll-glossary_tooltip/jekyll-glossary_tooltip.css). View the generated HTML output to see the HTML tags that are styled, or check the [tag.rb](lib/jekyll-glossary_tooltip/tag.rb) implementation in the method `render()`.
 
 
 ## Page listing all terms

@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+* The plugin now automatically injects its bundled tooltip CSS as a `<style>` block into every rendered HTML page — no manual CSS setup required. [#1](https://github.com/erikw/jekyll-glossary_tooltip/issues/1)
+  * To disable automatic injection and provide your own stylesheet, set `glossary_tooltip: { include_default_style: false }` in `_config.yml`.
+  * **Upgrading from a previous version?** If you were already manually copying and including the CSS, you can remove that manual step after upgrading. If you leave it in place, both styles will load — the injected one and your linked one. To avoid this, either remove your manual `<link>` tag or set `include_default_style: false` and keep your own stylesheet.
+
 ### Changed
 * When using `display:`, the tooltip now prepends the original glossary term before the definition to preserve the original term context. [#19](https://github.com/erikw/jekyll-glossary_tooltip/issues/19)
 

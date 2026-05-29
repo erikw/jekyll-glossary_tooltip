@@ -15,7 +15,7 @@ module Jekyll
       STYLE_BLOCK = "<style id=\"#{STYLE_ID}\">\n#{CSS_CONTENT}</style>".freeze
 
       # Matches an opening <head> tag, including any attributes (e.g. <head lang="en">).
-      HEAD_TAG_REGEX = /<head\b[^>]*>/i.freeze
+      HEAD_TAG_REGEX = /<head\b[^>]*>/i
 
       class << self
         def register_hooks

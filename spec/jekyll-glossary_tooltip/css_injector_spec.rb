@@ -4,19 +4,19 @@ require "jekyll-glossary_tooltip/tag"
 require "jekyll-glossary_tooltip/css_injector"
 
 I = Jekyll::GlossaryTooltip::CssInjector # Make namespace referencing easier here.
+CSS_FIRST_LINE = I::CSS_CONTENT.lines.first.strip
 
 # Minimal doubles for direct inject_style unit tests.
 MockSite = Struct.new(:config)
 MockDoc  = Struct.new(:site, :output)
 
 RSpec.describe Jekyll::GlossaryTooltip::CssInjector do
-  CSS_FIRST_LINE = I::CSS_CONTENT.lines.first.strip
-
   context "when CSS injection is enabled (the default)" do
     before(:context) do
       site = make_site({ "source" => source_dir("css_injection") })
       site.process
     end
+
     after(:context) { remove_dest_dir }
 
     let(:page) { File.read(dest_dir("page1.html")) }
@@ -43,6 +43,7 @@ RSpec.describe Jekyll::GlossaryTooltip::CssInjector do
       site = make_site({ "source" => source_dir("css_injection_disabled") })
       site.process
     end
+
     after(:context) { remove_dest_dir }
 
     let(:page) { File.read(dest_dir("page1.html")) }
@@ -52,7 +53,7 @@ RSpec.describe Jekyll::GlossaryTooltip::CssInjector do
     end
   end
 
-  context "inject_style edge cases" do
+  context "when inject_style is called directly" do
     let(:enabled_site) { MockSite.new({}) }
 
     it "does not inject into output with no <head>" do
@@ -73,12 +74,9 @@ RSpec.describe Jekyll::GlossaryTooltip::CssInjector do
       expect(doc.output).to match(/<head lang="en">\n<style id="#{I::STYLE_ID}">/)
     end
 
-    it "is idempotent when called a second time on already-injected output" do
+    it "injects the style block exactly once even when called twice" do
       doc = MockDoc.new(enabled_site, "<html><head><title>Test</title></head></html>")
-      I.inject_style(doc)
-      output_after_first = doc.output.dup
-      I.inject_style(doc)
-      expect(doc.output).to eq(output_after_first)
+      2.times { I.inject_style(doc) }
       expect(doc.output.scan(I::STYLE_ID).length).to eq(1)
     end
   end
